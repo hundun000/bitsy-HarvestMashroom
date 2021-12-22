@@ -505,7 +505,7 @@ DLG dlg_fieldLogic_0
     {
       - var_fieldState_0 == 1 ?
         Have output! wait next day
-        {item "mushroom" {{item "mushroom"} + var_fieldOutputAmount_0 * var_fieldLevel_0}
+        {item "mushroom" {{item "mushroom"} + var_fieldOutputAmount_0 * var_fieldLevel_0}}
         {var_fieldState_0 = 0}
         (image "SPR, spr_fieldSlot_0, spr_fieldSlot_prepare")
       - else ?
@@ -522,7 +522,7 @@ Next level price is {print var_fieldNextLevelPrice_0}{printItem "money"}.
   - {item "money"} >= var_fieldNextLevelPrice_0 ?
     {var_fieldLevel_0 = var_fieldLevel_0 + 1}
     You upgrade it to {print var_fieldLevel_0}.
-    {item "money" {{item "money"} - var_fieldNextLevelPrice_0}
+    {item "money" {{item "money"} - var_fieldNextLevelPrice_0}}
     {var_fieldNextLevelPrice_0 = var_fieldNextLevelPrice_0 + var_fieldLevel_0 * 2}
   - else ?
     You only have {print {item "money"}}{printItem "money"}.
@@ -533,10 +533,10 @@ NAME fieldUpgrader0
 DLG dlg_sellerAll
 """
 {
-  - {item "mushroom"} >= 0 ?
+  - {item "mushroom"} > 0 ?
     {var_temp = {item "mushroom"} * var_mashroomSellPrice}
     You sell {print {item "mushroom"}}{printItem "mushroom"} and gain {print var_temp}{printItem "money"}.
-    {item "money" {{item "money"} + var_temp}
+    {item "money" {{item "money"} + var_temp}}
     {item "mushroom" 0}
   - else ?
     You have no {printItem "mushroom"}.
@@ -549,7 +549,7 @@ DLG dlg_wildSlotLogic_0
 {
   - var_wildSlotState_0 == 1 ?
     Have output! wait someday later
-    {item "mushroom" {{item "mushroom"} + 1}
+    {item "mushroom" {{item "mushroom"} + 1}}
     {var_wildSlotState_0 = 0}
     (image "SPR, spr_wildSlot_0, spr_wildSlot_prepare")
   - else ?
@@ -563,7 +563,7 @@ DLG dlg_wildSlotLogic_1
 {
   - var_wildSlotState_1 == 1 ?
     Have output! wait someday later
-    {item "mushroom" {{item "mushroom"} + 1}
+    {item "mushroom" {{item "mushroom"} + 1}}
     {var_wildSlotState_1 = 0}
     (image "SPR, spr_wildSlot_1, spr_wildSlot_prepare")
   - else ?
@@ -577,7 +577,7 @@ DLG dlg_wildSlotLogic_2
 {
   - var_wildSlotState_2 == 1 ?
     Have output! wait someday later
-    {item "mushroom" {{item "mushroom"} + 1}
+    {item "mushroom" {{item "mushroom"} + 1}}
     {var_wildSlotState_2 = 0}
     (image "SPR, spr_wildSlot_2, spr_wildSlot_prepare")
   - else ?
@@ -591,7 +591,7 @@ DLG dlg_wildSlotLogic_3
 {
   - var_wildSlotState_3 == 1 ?
     Have output! wait someday later
-    {item "mushroom" {{item "mushroom"} + 1}
+    {item "mushroom" {{item "mushroom"} + 1}}
     {var_wildSlotState_3 = 0}
     (image "SPR, spr_wildSlot_3, spr_wildSlot_prepare")
   - else ?
@@ -605,7 +605,7 @@ DLG dlg_wildSlotLogic_4
 {
   - var_wildSlotState_4 == 1 ?
     Have output! wait someday later
-    {item "mushroom" {{item "mushroom"} + 1}
+    {item "mushroom" {{item "mushroom"} + 1}}
     {var_wildSlotState_4 = 0}
     (image "SPR, spr_wildSlot_4, spr_wildSlot_prepare")
   - else ?
@@ -619,7 +619,7 @@ DLG dlg_wildSlotLogic_5
 {
   - var_wildSlotState_5 == 1 ?
     Have output! wait someday later
-    {item "mushroom" {{item "mushroom"} + 1}
+    {item "mushroom" {{item "mushroom"} + 1}}
     {var_wildSlotState_5 = 0}
     (image "SPR, spr_wildSlot_5, spr_wildSlot_prepare")
   - else ?
@@ -633,7 +633,7 @@ DLG dlg_wildSlotLogic_6
 {
   - var_wildSlotState_6 == 1 ?
     Have output! wait someday later
-    {item "mushroom" {{item "mushroom"} + 1}
+    {item "mushroom" {{item "mushroom"} + 1}}
     {var_wildSlotState_6 = 0}
     (image "SPR, spr_wildSlot_6, spr_wildSlot_prepare")
   - else ?
@@ -647,7 +647,7 @@ DLG dlg_wildSlotLogic_7
 {
   - var_wildSlotState_7 == 1 ?
     Have output! wait someday later
-    {item "mushroom" {{item "mushroom"} + 1}
+    {item "mushroom" {{item "mushroom"} + 1}}
     {var_wildSlotState_7 = 0}
     (image "SPR, spr_wildSlot_7, spr_wildSlot_prepare")
   - else ?
@@ -661,7 +661,7 @@ DLG dlg_wildSlotLogic_8
 {
   - var_wildSlotState_8 == 1 ?
     Have output! wait someday later
-    {item "mushroom" {{item "mushroom"} + 1}
+    {item "mushroom" {{item "mushroom"} + 1}}
     {var_wildSlotState_8 = 0}
     (image "SPR, spr_wildSlot_8, spr_wildSlot_prepare")
   - else ?
@@ -675,7 +675,7 @@ DLG dlg_wildSlotLogic_9
 {
   - var_wildSlotState_9 == 1 ?
     Have output! wait someday later
-    {item "mushroom" {{item "mushroom"} + 1}
+    {item "mushroom" {{item "mushroom"} + 1}}
     {var_wildSlotState_9 = 0}
     (image "SPR, spr_wildSlot_9, spr_wildSlot_prepare")
   - else ?
