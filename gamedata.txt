@@ -1,0 +1,740 @@
+Write your game's title here
+
+# BITSY VERSION 7.10
+
+! ROOM_FORMAT 1
+
+PAL 0
+NAME blueprint
+0,82,204
+128,159,255
+255,255,255
+
+ROOM rm_home
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,a,a,a,a,a,a,a,a,a,a,a,a,a,a,0
+0,a,0,0,0,0,0,0,0,0,0,0,0,0,a,0
+0,a,0,0,0,0,0,0,0,0,0,0,0,0,a,0
+0,a,0,0,0,0,0,0,0,0,0,0,0,0,a,0
+0,a,0,0,0,0,0,0,0,0,0,0,0,0,a,0
+0,a,0,0,0,0,0,0,0,0,0,0,0,0,a,0
+0,a,0,0,0,0,0,0,0,0,0,0,0,0,a,0
+0,a,0,0,0,0,0,0,0,0,0,0,0,0,a,0
+0,a,0,0,0,0,0,0,0,0,0,0,0,0,a,0
+0,a,0,0,0,0,0,0,0,0,0,0,0,0,a,0
+0,a,0,0,0,0,0,0,0,0,0,0,0,0,a,0
+0,a,0,0,0,0,0,0,0,0,0,0,0,0,a,0
+0,a,0,0,0,0,0,0,0,0,0,0,0,0,a,0
+0,a,a,a,a,a,a,a,a,a,a,a,a,a,a,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+NAME home
+PAL 0
+
+ROOM rm_start
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,a,a,a,a,a,a,0,0,0,0,0,0
+0,0,0,0,a,0,0,0,0,a,0,0,0,0,0,0
+0,0,0,0,a,a,a,0,a,a,0,0,0,0,0,0
+0,0,0,0,0,0,a,a,a,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+NAME start
+EXT 8,7 rm_home 7,4 DLG dlg_newDay
+PAL 0
+
+TIL a
+11111111
+10000001
+10000001
+10011001
+10011001
+10000001
+10000001
+11111111
+NAME block
+WAL true
+
+SPR A
+00011000
+00011000
+00011000
+00111100
+01111110
+10111101
+00100100
+00100100
+POS rm_start 5,7
+ITM money 10
+
+SPR spr_bed_0
+00000000
+00000000
+00000000
+00000000
+01111111
+10000000
+11111111
+10000000
+NAME bed0
+DLG dlg_newDay
+POS rm_home 2,2
+
+SPR spr_bed_1
+00000000
+00000000
+00000001
+00000001
+11011101
+00100011
+11111111
+00000001
+NAME bed1
+DLG dlg_newDay
+POS rm_home 3,2
+
+SPR spr_fieldSlot_0
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+01111110
+10000001
+>
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+01111110
+10000001
+NAME fieldSlot0
+DLG dlg_fieldLogic_0
+POS rm_home 2,6
+
+SPR spr_fieldSlot_prepare
+00000000
+00000000
+00000000
+01111100
+10010010
+00010001
+01111110
+10000001
+>
+00000000
+00000000
+00000000
+11111111
+00010000
+00010000
+01111110
+10000001
+NAME fieldSlot_prepare
+
+SPR spr_fieldSlot_harvest
+01111100
+10010010
+00010001
+00010000
+00010000
+00010000
+01111110
+10000001
+>
+11111111
+00010000
+00010000
+00010000
+00010000
+00010000
+01111110
+10000001
+NAME fieldSlot_harvest
+
+SPR spr_fieldUpgrader_0
+00111000
+01010100
+10010010
+00010000
+00010000
+00010000
+00010000
+00010000
+>
+00111000
+01010100
+10010010
+00010000
+00010000
+00010000
+00010000
+00010000
+NAME fieldUpgrader0
+DLG dlg_fieldUpgrader_0
+POS rm_home 2,4
+
+SPR spr_sellerAll
+01101110
+10001000
+10001000
+01001110
+00101000
+00101000
+10101000
+01001110
+>
+10001000
+10001000
+10001000
+10001000
+10001000
+10001000
+10001000
+11101110
+NAME sellerAll
+DLG dlg_sellerAll
+POS rm_home 2,3
+
+SPR spr_wildSlot_0
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+01111110
+11111111
+>
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+01111110
+11111111
+NAME wildSlot0
+DLG dlg_wildSlotLogic_0
+POS rm_home 13,2
+
+SPR spr_wildSlot_1
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+01111110
+11111111
+>
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+01111110
+11111111
+NAME wildSlot1
+DLG dlg_wildSlotLogic_1
+POS rm_home 13,3
+
+SPR spr_wildSlot_2
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+01111110
+11111111
+>
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+01111110
+11111111
+NAME wildSlot2
+DLG dlg_wildSlotLogic_2
+POS rm_home 13,4
+
+SPR spr_wildSlot_3
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+01111110
+11111111
+>
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+01111110
+11111111
+NAME wildSlot3
+DLG dlg_wildSlotLogic_3
+POS rm_home 13,5
+
+SPR spr_wildSlot_4
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+01111110
+11111111
+>
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+01111110
+11111111
+NAME wildSlot4
+DLG dlg_wildSlotLogic_4
+POS rm_home 13,6
+
+SPR spr_wildSlot_5
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+01111110
+11111111
+>
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+01111110
+11111111
+NAME wildSlot5
+DLG dlg_wildSlotLogic_5
+POS rm_home 13,7
+
+SPR spr_wildSlot_6
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+01111110
+11111111
+>
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+01111110
+11111111
+NAME wildSlot6
+DLG dlg_wildSlotLogic_6
+POS rm_home 13,8
+
+SPR spr_wildSlot_prepare
+00000000
+00000000
+00000000
+01111100
+10010010
+00010001
+01111110
+11111111
+>
+00000000
+00000000
+00000000
+11111111
+00010000
+00010000
+01111110
+11111111
+NAME wildSlot_prepare
+
+SPR spr_wildSlot_harvest
+01111100
+10010010
+00010001
+00010000
+00010000
+00010000
+01111110
+10000001
+>
+11111111
+00010000
+00010000
+00010000
+00010000
+00010000
+01111110
+10000001
+NAME wildSlot_harvest
+
+ITM money
+00111100
+01000010
+10011001
+10100101
+10100101
+10011001
+01000010
+00111100
+NAME money
+
+ITM mushroom
+00000000
+00000000
+00000000
+01111110
+10000001
+11111111
+00100100
+00111100
+NAME mushroom
+
+ITM mushroon
+00000000
+11111111
+10000001
+11000011
+10100101
+10011001
+11111111
+00000000
+NAME startNote
+DLG dlh
+
+DLG dlg_newDay
+"""
+{print var_calendar_date}th day come...
+{var_calendar_date = var_calendar_date + 1}
+{
+  - var_fieldLevel_0 > 0 ?
+    {var_fieldState_0 = 1}
+    (image "SPR, spr_fieldSlot_0, spr_fieldSlot_harvest")
+  - else ?
+    {var_fieldState_0 = 0}
+}{var_wildSlotState_0 = 0}{var_wildSlotState_1 = 0}{var_wildSlotState_2 = 0}{var_wildSlotState_3 = 0}{var_wildSlotState_4 = 0}{var_wildSlotState_5 = 0}{var_wildSlotState_6 = 0}{var_wildSlotState_7 = 0}{var_wildSlotState_8 = 0}{var_wildSlotState_9 = 0}{shuffle
+  - {var_wildSlotState_2 = 1}{var_wildSlotState_4 = 1}{var_wildSlotState_5 = 1}{var_wildSlotState_6 = 1}{var_wildSlotState_7 = 1}{var_wildSlotState_8 = 1}
+  - {var_wildSlotState_4 = 1}{var_wildSlotState_5 = 1}
+  - {var_wildSlotState_0 = 1}{var_wildSlotState_4 = 1}{var_wildSlotState_5 = 1}{var_wildSlotState_7 = 1}{var_wildSlotState_9 = 1}
+  - {var_wildSlotState_2 = 1}{var_wildSlotState_4 = 1}{var_wildSlotState_8 = 1}{var_wildSlotState_9 = 1}
+  - {var_wildSlotState_1 = 1}{var_wildSlotState_3 = 1}{var_wildSlotState_6 = 1}
+  - {var_wildSlotState_0 = 1}{var_wildSlotState_3 = 1}{var_wildSlotState_4 = 1}{var_wildSlotState_7 = 1}
+  - 
+  - {var_wildSlotState_0 = 1}{var_wildSlotState_2 = 1}{var_wildSlotState_8 = 1}
+  - {var_wildSlotState_0 = 1}{var_wildSlotState_6 = 1}{var_wildSlotState_7 = 1}{var_wildSlotState_9 = 1}
+  - {var_wildSlotState_5 = 1}{var_wildSlotState_7 = 1}
+  - {var_wildSlotState_0 = 1}{var_wildSlotState_3 = 1}{var_wildSlotState_4 = 1}{var_wildSlotState_9 = 1}
+}{
+  - var_wildSlotState_0 > 0 ?
+    (image "SPR, spr_wildSlot_0, spr_wildSlot_harvest")
+  - else ?
+    (image "SPR, spr_wildSlot_0, spr_wildSlot_prepare")
+}{
+  - var_wildSlotState_1 > 0 ?
+    (image "SPR, spr_wildSlot_1, spr_wildSlot_harvest")
+  - else ?
+    (image "SPR, spr_wildSlot_1, spr_wildSlot_prepare")
+}{
+  - var_wildSlotState_2 > 0 ?
+    (image "SPR, spr_wildSlot_2, spr_wildSlot_harvest")
+  - else ?
+    (image "SPR, spr_wildSlot_2, spr_wildSlot_prepare")
+}{
+  - var_wildSlotState_3 > 0 ?
+    (image "SPR, spr_wildSlot_3, spr_wildSlot_harvest")
+  - else ?
+    (image "SPR, spr_wildSlot_3, spr_wildSlot_prepare")
+}{
+  - var_wildSlotState_4 > 0 ?
+    (image "SPR, spr_wildSlot_4, spr_wildSlot_harvest")
+  - else ?
+    (image "SPR, spr_wildSlot_4, spr_wildSlot_prepare")
+}{
+  - var_wildSlotState_5 > 0 ?
+    (image "SPR, spr_wildSlot_5, spr_wildSlot_harvest")
+  - else ?
+    (image "SPR, spr_wildSlot_5, spr_wildSlot_prepare")
+}{
+  - var_wildSlotState_6 > 0 ?
+    (image "SPR, spr_wildSlot_6, spr_wildSlot_harvest")
+  - else ?
+    (image "SPR, spr_wildSlot_6, spr_wildSlot_prepare")
+}
+"""
+NAME newDay
+
+DLG dlg_fieldLogic_0
+"""
+{
+  - var_fieldLevel_0 == 0 ?
+    level is 0!
+  - else ?
+    {
+      - var_fieldState_0 == 1 ?
+        Have output! wait next day
+        {item "mushroom" {{item "mushroom"} + var_fieldOutputAmount_0 * var_fieldLevel_0}
+        {var_fieldState_0 = 0}
+        (image "SPR, spr_fieldSlot_0, spr_fieldSlot_prepare")
+      - else ?
+        I said wait next day
+    }
+}
+"""
+NAME fieldLogic0
+
+DLG dlg_fieldUpgrader_0
+"""
+Next level price is {print var_fieldNextLevelPrice_0}{printItem "money"}.
+{
+  - {item "money"} >= var_fieldNextLevelPrice_0 ?
+    {var_fieldLevel_0 = var_fieldLevel_0 + 1}
+    You upgrade it to {print var_fieldLevel_0}.
+    {item "money" {{item "money"} - var_fieldNextLevelPrice_0}
+    {var_fieldNextLevelPrice_0 = var_fieldNextLevelPrice_0 + var_fieldLevel_0 * 2}
+  - else ?
+    You only have {print {item "money"}}{printItem "money"}.
+}
+"""
+NAME fieldUpgrader0
+
+DLG dlg_sellerAll
+"""
+{
+  - {item "mushroom"} >= 0 ?
+    {var_temp = {item "mushroom"} * var_mashroomSellPrice}
+    You sell {print {item "mushroom"}}{printItem "mushroom"} and gain {print var_temp}{printItem "money"}.
+    {item "money" {{item "money"} + var_temp}
+    {item "mushroom" 0}
+  - else ?
+    You have no {printItem "mushroom"}.
+}
+"""
+NAME sellerAll
+
+DLG dlg_wildSlotLogic_0
+"""
+{
+  - var_wildSlotState_0 == 1 ?
+    Have output! wait someday later
+    {item "mushroom" {{item "mushroom"} + 1}
+    {var_wildSlotState_0 = 0}
+    (image "SPR, spr_wildSlot_0, spr_wildSlot_prepare")
+  - else ?
+    Here is empty!
+}
+"""
+NAME wildSlotLogic0
+
+DLG dlg_wildSlotLogic_1
+"""
+{
+  - var_wildSlotState_1 == 1 ?
+    Have output! wait someday later
+    {item "mushroom" {{item "mushroom"} + 1}
+    {var_wildSlotState_1 = 0}
+    (image "SPR, spr_wildSlot_1, spr_wildSlot_prepare")
+  - else ?
+    Here is empty!
+}
+"""
+NAME wildSlotLogic1
+
+DLG dlg_wildSlotLogic_2
+"""
+{
+  - var_wildSlotState_2 == 1 ?
+    Have output! wait someday later
+    {item "mushroom" {{item "mushroom"} + 1}
+    {var_wildSlotState_2 = 0}
+    (image "SPR, spr_wildSlot_2, spr_wildSlot_prepare")
+  - else ?
+    Here is empty!
+}
+"""
+NAME wildSlotLogic2
+
+DLG dlg_wildSlotLogic_3
+"""
+{
+  - var_wildSlotState_3 == 1 ?
+    Have output! wait someday later
+    {item "mushroom" {{item "mushroom"} + 1}
+    {var_wildSlotState_3 = 0}
+    (image "SPR, spr_wildSlot_3, spr_wildSlot_prepare")
+  - else ?
+    Here is empty!
+}
+"""
+NAME wildSlotLogic3
+
+DLG dlg_wildSlotLogic_4
+"""
+{
+  - var_wildSlotState_4 == 1 ?
+    Have output! wait someday later
+    {item "mushroom" {{item "mushroom"} + 1}
+    {var_wildSlotState_4 = 0}
+    (image "SPR, spr_wildSlot_4, spr_wildSlot_prepare")
+  - else ?
+    Here is empty!
+}
+"""
+NAME wildSlotLogic4
+
+DLG dlg_wildSlotLogic_5
+"""
+{
+  - var_wildSlotState_5 == 1 ?
+    Have output! wait someday later
+    {item "mushroom" {{item "mushroom"} + 1}
+    {var_wildSlotState_5 = 0}
+    (image "SPR, spr_wildSlot_5, spr_wildSlot_prepare")
+  - else ?
+    Here is empty!
+}
+"""
+NAME wildSlotLogic5
+
+DLG dlg_wildSlotLogic_6
+"""
+{
+  - var_wildSlotState_6 == 1 ?
+    Have output! wait someday later
+    {item "mushroom" {{item "mushroom"} + 1}
+    {var_wildSlotState_6 = 0}
+    (image "SPR, spr_wildSlot_6, spr_wildSlot_prepare")
+  - else ?
+    Here is empty!
+}
+"""
+NAME wildSlotLogic6
+
+DLG dlg_wildSlotLogic_7
+"""
+{
+  - var_wildSlotState_7 == 1 ?
+    Have output! wait someday later
+    {item "mushroom" {{item "mushroom"} + 1}
+    {var_wildSlotState_7 = 0}
+    (image "SPR, spr_wildSlot_7, spr_wildSlot_prepare")
+  - else ?
+    Here is empty!
+}
+"""
+NAME wildSlotLogic7
+
+DLG dlg_wildSlotLogic_8
+"""
+{
+  - var_wildSlotState_8 == 1 ?
+    Have output! wait someday later
+    {item "mushroom" {{item "mushroom"} + 1}
+    {var_wildSlotState_8 = 0}
+    (image "SPR, spr_wildSlot_8, spr_wildSlot_prepare")
+  - else ?
+    Here is empty!
+}
+"""
+NAME wildSlotLogic8
+
+DLG dlg_wildSlotLogic_9
+"""
+{
+  - var_wildSlotState_9 == 1 ?
+    Have output! wait someday later
+    {item "mushroom" {{item "mushroom"} + 1}
+    {var_wildSlotState_9 = 0}
+    (image "SPR, spr_wildSlot_9, spr_wildSlot_prepare")
+  - else ?
+    Here is empty!
+}
+"""
+NAME wildSlotLogic9
+
+VAR var_temp
+0
+
+VAR var_calendar_date
+1
+
+VAR var_mashroomSellPrice
+5
+
+VAR var_fieldNextLevelPrice_0
+5
+
+VAR var_fieldLevel_0
+1
+
+VAR var_fieldState_0
+1
+
+VAR var_fieldOutputAmount_0
+5
+
+VAR var_wildSlotState_0
+1
+
+VAR var_wildSlotState_1
+1
+
+VAR var_wildSlotState_2
+1
+
+VAR var_wildSlotState_3
+1
+
+VAR var_wildSlotState_4
+1
+
+VAR var_wildSlotState_5
+1
+
+VAR var_wildSlotState_6
+1
+
+VAR var_wildSlotState_7
+1
+
+VAR var_wildSlotState_8
+1
+
+VAR var_wildSlotState_9
+1
+
+VAR var_wildSlotState_10
+1
+
