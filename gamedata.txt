@@ -73,7 +73,7 @@ SPR A
 00100100
 00100100
 POS rm_start 5,7
-ITM money 10
+ITM itm_money 10
 
 SPR spr_bed_0
 00000000
@@ -110,29 +110,11 @@ SPR spr_fieldSlot_0
 00000000
 01111110
 10000001
->
-00000000
-00000000
-00000000
-00000000
-00000000
-00000000
-01111110
-10000001
 NAME fieldSlot0
 DLG dlg_fieldLogic_0
 POS rm_home 2,6
 
 SPR spr_fieldSlot_prepare
-00000000
-00000000
-00000000
-01111100
-10010010
-00010001
-01111110
-10000001
->
 00000000
 00000000
 00000000
@@ -144,15 +126,6 @@ SPR spr_fieldSlot_prepare
 NAME fieldSlot_prepare
 
 SPR spr_fieldSlot_harvest
-01111100
-10010010
-00010001
-00010000
-00010000
-00010000
-01111110
-10000001
->
 11111111
 00010000
 00010000
@@ -172,51 +145,35 @@ SPR spr_fieldUpgrader_0
 00010000
 00010000
 00010000
->
-00111000
-01010100
-10010010
-00010000
-00010000
-00010000
-00010000
-00010000
 NAME fieldUpgrader0
 DLG dlg_fieldUpgrader_0
 POS rm_home 2,4
 
 SPR spr_sellerAll
-01101110
-10001000
-10001000
-01001110
-00101000
-00101000
-10101000
-01001110
->
-10001000
-10001000
-10001000
-10001000
-10001000
-10001000
-10001000
-11101110
+01000000
+11100000
+01000000
+00000000
+11101010
+10101010
+11101010
+10101111
 NAME sellerAll
 DLG dlg_sellerAll
 POS rm_home 2,3
 
+SPR spr_sellerBoxLD
+00011001
+01100110
+10011100
+01100100
+01000100
+01000100
+01000100
+01111111
+NAME sellerBoxLD
+
 SPR spr_wildSlot_0
-00000000
-00000000
-00000000
-00000000
-00000000
-00000000
-01111110
-11111111
->
 00000000
 00000000
 00000000
@@ -238,29 +195,11 @@ SPR spr_wildSlot_1
 00000000
 01111110
 11111111
->
-00000000
-00000000
-00000000
-00000000
-00000000
-00000000
-01111110
-11111111
 NAME wildSlot1
 DLG dlg_wildSlotLogic_1
 POS rm_home 13,3
 
 SPR spr_wildSlot_2
-00000000
-00000000
-00000000
-00000000
-00000000
-00000000
-01111110
-11111111
->
 00000000
 00000000
 00000000
@@ -282,29 +221,11 @@ SPR spr_wildSlot_3
 00000000
 01111110
 11111111
->
-00000000
-00000000
-00000000
-00000000
-00000000
-00000000
-01111110
-11111111
 NAME wildSlot3
 DLG dlg_wildSlotLogic_3
 POS rm_home 13,5
 
 SPR spr_wildSlot_4
-00000000
-00000000
-00000000
-00000000
-00000000
-00000000
-01111110
-11111111
->
 00000000
 00000000
 00000000
@@ -326,29 +247,11 @@ SPR spr_wildSlot_5
 00000000
 01111110
 11111111
->
-00000000
-00000000
-00000000
-00000000
-00000000
-00000000
-01111110
-11111111
 NAME wildSlot5
 DLG dlg_wildSlotLogic_5
 POS rm_home 13,7
 
 SPR spr_wildSlot_6
-00000000
-00000000
-00000000
-00000000
-00000000
-00000000
-01111110
-11111111
->
 00000000
 00000000
 00000000
@@ -370,38 +273,21 @@ SPR spr_wildSlot_prepare
 00010001
 01111110
 11111111
->
-00000000
-00000000
-00000000
-11111111
-00010000
-00010000
-01111110
-11111111
 NAME wildSlot_prepare
 
-SPR spr_wildSlot_harvest
-01111100
-10010010
-00010001
-00010000
-00010000
-00010000
-01111110
-10000001
->
-11111111
-00010000
-00010000
-00010000
-00010000
-00010000
-01111110
-10000001
-NAME wildSlot_harvest
+SPR spr_storage
+00000000
+00000000
+01111111
+01000001
+11111101
+10000101
+10000111
+11111100
+NAME storage
+DLG dlg_storageLogic
 
-ITM money
+ITM itm_money
 00111100
 01000010
 10011001
@@ -412,7 +298,7 @@ ITM money
 00111100
 NAME money
 
-ITM mushroom
+ITM itm_mushroom
 00000000
 00000000
 00000000
@@ -423,23 +309,17 @@ ITM mushroom
 00111100
 NAME mushroom
 
-ITM mushroon
-00000000
-11111111
-10000001
-11000011
-10100101
-10011001
-11111111
-00000000
-NAME startNote
-DLG dlh
-
 DLG dlg_newDay
 """
 {print var_calendar_date}th day come...
 {var_calendar_date = var_calendar_date + 1}
 {
+  - var_mashroomSellCacheCount > 0 ?
+    {var_temp = var_mashroomSellCacheCount * var_mashroomSellPrice}
+    You sell {print var_mashroomSellCacheCount} {printItem "itm_mushroom"} and gain {print var_temp} {printItem "itm_money"}.
+    {item "itm_money" {{item "itm_money"} + var_temp}}
+    {var_mashroomSellCacheCount = 0}
+}{
   - var_fieldLevel_0 > 0 ?
     {var_fieldState_0 = 1}
     (image "SPR, spr_fieldSlot_0, spr_fieldSlot_harvest")
@@ -505,7 +385,7 @@ DLG dlg_fieldLogic_0
     {
       - var_fieldState_0 == 1 ?
         Have output! wait next day
-        {item "mushroom" {{item "mushroom"} + var_fieldOutputAmount_0 * var_fieldLevel_0}}
+        {item "itm_mushroom" {{item "itm_mushroom"} + var_fieldOutputAmount_0 * var_fieldLevel_0}}
         {var_fieldState_0 = 0}
         (image "SPR, spr_fieldSlot_0, spr_fieldSlot_prepare")
       - else ?
@@ -517,15 +397,15 @@ NAME fieldLogic0
 
 DLG dlg_fieldUpgrader_0
 """
-Next level price is {print var_fieldNextLevelPrice_0}{printItem "money"}.
+Next level price is {print var_fieldNextLevelPrice_0}{printItem "itm_money"}.
 {
-  - {item "money"} >= var_fieldNextLevelPrice_0 ?
+  - {item "itm_money"} >= var_fieldNextLevelPrice_0 ?
     {var_fieldLevel_0 = var_fieldLevel_0 + 1}
     You upgrade it to {print var_fieldLevel_0}.
-    {item "money" {{item "money"} - var_fieldNextLevelPrice_0}}
+    {item "itm_money" {{item "itm_money"} - var_fieldNextLevelPrice_0}}
     {var_fieldNextLevelPrice_0 = var_fieldNextLevelPrice_0 + var_fieldLevel_0 * 2}
   - else ?
-    You only have {print {item "money"}}{printItem "money"}.
+    You only have {print {item "itm_money"}}{printItem "itm_money"}.
 }
 """
 NAME fieldUpgrader0
@@ -533,23 +413,30 @@ NAME fieldUpgrader0
 DLG dlg_sellerAll
 """
 {
-  - {item "mushroom"} > 0 ?
-    {var_temp = {item "mushroom"} * var_mashroomSellPrice}
-    You sell {print {item "mushroom"}}{printItem "mushroom"} and gain {print var_temp}{printItem "money"}.
-    {item "money" {{item "money"} + var_temp}}
-    {item "mushroom" 0}
+  - {item "itm_mushroom"} > 0 ?
+    {var_mashroomSellCacheCount = var_mashroomSellCacheCount + {item "itm_mushroom"}}
+    You put {print {item "itm_mushroom"}} {printItem "itm_mushroom"} into SellCache. Current cache is {print var_mashroomSellCacheCount} {printItem "itm_mushroom"}.
+    {item "itm_mushroom" 0}
   - else ?
-    You have no {printItem "mushroom"}.
+    You have no {printItem "itm_mushroom"}.
 }
 """
 NAME sellerAll
+
+DLG dlg_storageLogic
+"""
+{
+  You have {print var_temp} {printItem "itm_money"}, {item "itm_mushroom"}} {printItem "itm_mushroom"}.
+}
+"""
+NAME storageLogic
 
 DLG dlg_wildSlotLogic_0
 """
 {
   - var_wildSlotState_0 == 1 ?
     Have output! wait someday later
-    {item "mushroom" {{item "mushroom"} + 1}}
+    {item "itm_mushroom" {{item "itm_mushroom"} + 1}}
     {var_wildSlotState_0 = 0}
     (image "SPR, spr_wildSlot_0, spr_wildSlot_prepare")
   - else ?
@@ -563,7 +450,7 @@ DLG dlg_wildSlotLogic_1
 {
   - var_wildSlotState_1 == 1 ?
     Have output! wait someday later
-    {item "mushroom" {{item "mushroom"} + 1}}
+    {item "itm_mushroom" {{item "itm_mushroom"} + 1}}
     {var_wildSlotState_1 = 0}
     (image "SPR, spr_wildSlot_1, spr_wildSlot_prepare")
   - else ?
@@ -577,7 +464,7 @@ DLG dlg_wildSlotLogic_2
 {
   - var_wildSlotState_2 == 1 ?
     Have output! wait someday later
-    {item "mushroom" {{item "mushroom"} + 1}}
+    {item "itm_mushroom" {{item "itm_mushroom"} + 1}}
     {var_wildSlotState_2 = 0}
     (image "SPR, spr_wildSlot_2, spr_wildSlot_prepare")
   - else ?
@@ -591,7 +478,7 @@ DLG dlg_wildSlotLogic_3
 {
   - var_wildSlotState_3 == 1 ?
     Have output! wait someday later
-    {item "mushroom" {{item "mushroom"} + 1}}
+    {item "itm_mushroom" {{item "itm_mushroom"} + 1}}
     {var_wildSlotState_3 = 0}
     (image "SPR, spr_wildSlot_3, spr_wildSlot_prepare")
   - else ?
@@ -605,7 +492,7 @@ DLG dlg_wildSlotLogic_4
 {
   - var_wildSlotState_4 == 1 ?
     Have output! wait someday later
-    {item "mushroom" {{item "mushroom"} + 1}}
+    {item "itm_mushroom" {{item "itm_mushroom"} + 1}}
     {var_wildSlotState_4 = 0}
     (image "SPR, spr_wildSlot_4, spr_wildSlot_prepare")
   - else ?
@@ -619,7 +506,7 @@ DLG dlg_wildSlotLogic_5
 {
   - var_wildSlotState_5 == 1 ?
     Have output! wait someday later
-    {item "mushroom" {{item "mushroom"} + 1}}
+    {item "itm_mushroom" {{item "itm_mushroom"} + 1}}
     {var_wildSlotState_5 = 0}
     (image "SPR, spr_wildSlot_5, spr_wildSlot_prepare")
   - else ?
@@ -633,7 +520,7 @@ DLG dlg_wildSlotLogic_6
 {
   - var_wildSlotState_6 == 1 ?
     Have output! wait someday later
-    {item "mushroom" {{item "mushroom"} + 1}}
+    {item "itm_mushroom" {{item "itm_mushroom"} + 1}}
     {var_wildSlotState_6 = 0}
     (image "SPR, spr_wildSlot_6, spr_wildSlot_prepare")
   - else ?
@@ -647,7 +534,7 @@ DLG dlg_wildSlotLogic_7
 {
   - var_wildSlotState_7 == 1 ?
     Have output! wait someday later
-    {item "mushroom" {{item "mushroom"} + 1}}
+    {item "itm_mushroom" {{item "itm_mushroom"} + 1}}
     {var_wildSlotState_7 = 0}
     (image "SPR, spr_wildSlot_7, spr_wildSlot_prepare")
   - else ?
@@ -661,7 +548,7 @@ DLG dlg_wildSlotLogic_8
 {
   - var_wildSlotState_8 == 1 ?
     Have output! wait someday later
-    {item "mushroom" {{item "mushroom"} + 1}}
+    {item "itm_mushroom" {{item "itm_mushroom"} + 1}}
     {var_wildSlotState_8 = 0}
     (image "SPR, spr_wildSlot_8, spr_wildSlot_prepare")
   - else ?
@@ -675,7 +562,7 @@ DLG dlg_wildSlotLogic_9
 {
   - var_wildSlotState_9 == 1 ?
     Have output! wait someday later
-    {item "mushroom" {{item "mushroom"} + 1}}
+    {item "itm_mushroom" {{item "itm_mushroom"} + 1}}
     {var_wildSlotState_9 = 0}
     (image "SPR, spr_wildSlot_9, spr_wildSlot_prepare")
   - else ?
@@ -689,6 +576,9 @@ VAR var_temp
 
 VAR var_calendar_date
 1
+
+VAR var_mashroomSellCacheCount
+0
 
 VAR var_mashroomSellPrice
 5
