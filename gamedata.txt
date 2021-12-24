@@ -51,6 +51,46 @@ NAME start
 EXT 8,7 rm_home 7,4 DLG dlg_newDay
 PAL 0
 
+ROOM rm_reachGoal
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,a,a,a,a,a,a,0,0,0,0,0,0
+0,0,0,0,a,0,0,0,0,a,0,0,0,0,0,0
+0,0,0,0,a,a,a,0,a,a,0,0,0,0,0,0
+0,0,0,0,0,0,a,a,a,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,1,0,0,0,1,0,1,0,1,0,0,1,0,0,0
+0,1,0,1,0,1,0,1,0,1,1,0,1,0,0,0
+0,1,1,0,1,1,0,1,0,1,0,1,1,0,0,0
+0,1,0,0,0,1,0,1,0,1,0,0,1,0,0,0
+NAME reachGoal
+PAL 0
+
+ROOM rm_notReachGoal
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,a,a,a,a,a,a,0,0,0,0,0,0
+0,0,0,0,a,0,0,0,0,a,0,0,0,0,0,0
+0,0,0,0,a,a,a,0,a,a,0,0,0,0,0,0
+0,0,0,0,0,0,a,a,a,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,1,0,0,1,0,1,1,1,0,1,1,1,0,0
+0,0,1,1,0,1,0,1,0,1,0,0,1,0,0,0
+0,0,1,0,1,1,0,1,0,1,0,0,1,0,0,0
+0,0,1,0,0,1,0,1,1,1,0,0,1,0,0,0
+NAME notReachGoal
+PAL 0
+
 TIL a
 11111111
 10000001
@@ -74,6 +114,7 @@ SPR A
 00100100
 POS rm_start 5,7
 ITM itm_money 10
+ITM itm_mushroom 5
 
 SPR spr_bed_0
 00000000
@@ -86,7 +127,7 @@ SPR spr_bed_0
 10000000
 NAME bed0
 DLG dlg_newDay
-POS rm_home 2,2
+POS rm_home 3,2
 
 SPR spr_bed_1
 00000000
@@ -99,7 +140,7 @@ SPR spr_bed_1
 00000001
 NAME bed1
 DLG dlg_newDay
-POS rm_home 3,2
+POS rm_home 4,2
 
 SPR spr_fieldSlot_0
 00000000
@@ -149,7 +190,7 @@ NAME fieldUpgrader0
 DLG dlg_fieldUpgrader_0
 POS rm_home 2,4
 
-SPR spr_sellerAll
+SPR spr_cacheAllButton
 01000000
 11100000
 01000000
@@ -158,20 +199,9 @@ SPR spr_sellerAll
 10101010
 11101010
 10101111
-NAME sellerAll
-DLG dlg_sellerAll
+NAME cacheAllButton
+DLG dlg_cacheAllLogic
 POS rm_home 2,3
-
-SPR spr_sellerBoxLD
-00011001
-01100110
-10011100
-01100100
-01000100
-01000100
-01000100
-01111111
-NAME sellerBoxLD
 
 SPR spr_wildSlot_0
 00000000
@@ -286,6 +316,7 @@ SPR spr_storage
 11111100
 NAME storage
 DLG dlg_storageLogic
+POS rm_home 5,2
 
 ITM itm_money
 00111100
@@ -311,9 +342,20 @@ NAME mushroom
 
 DLG dlg_newDay
 """
-{print var_calendar_date}th day come...
-{var_calendar_date = var_calendar_date + 1}
+{var_calendarDate = var_calendarDate + 1}
 {
+  - var_calendarDate == var_goalLimitDate ?
+    {
+      - {item "itm_money"} >= var_goalMoney ?
+        You reach the goal!{pg}
+        (exitNow "rm_reachGoal")
+      - else ? 
+        You don't reach the goal!{pg}
+        (exitNow "rm_notReachGoal")
+    }
+  - else ?
+    {print var_calendarDate}th day come...
+}{
   - var_mashroomSellCacheCount > 0 ?
     {var_temp = var_mashroomSellCacheCount * var_mashroomSellPrice}
     You sell {print var_mashroomSellCacheCount} {printItem "itm_mushroom"} and gain {print var_temp} {printItem "itm_money"}.
@@ -410,7 +452,7 @@ Next level price is {print var_fieldNextLevelPrice_0}{printItem "itm_money"}.
 """
 NAME fieldUpgrader0
 
-DLG dlg_sellerAll
+DLG dlg_cacheAllLogic
 """
 {
   - {item "itm_mushroom"} > 0 ?
@@ -421,13 +463,24 @@ DLG dlg_sellerAll
     You have no {printItem "itm_mushroom"}.
 }
 """
-NAME sellerAll
+NAME cacheAllLogic
+
+DLG dlg_cacheOneLogic
+"""
+{
+  - {item "itm_mushroom"} > 0 ?
+    {var_mashroomSellCacheCount = var_mashroomSellCacheCount + {item "itm_mushroom"}}
+    You put {print {item "itm_mushroom"}} {printItem "itm_mushroom"} into SellCache. Current cache is {print var_mashroomSellCacheCount} {printItem "itm_mushroom"}.
+    {item "itm_mushroom" 0}
+  - else ?
+    You have no {printItem "itm_mushroom"}.
+}
+"""
+NAME cacheOneLogic
 
 DLG dlg_storageLogic
 """
-{
-  You have {print var_temp} {printItem "itm_money"}, {item "itm_mushroom"}} {printItem "itm_mushroom"}.
-}
+You have {print var_temp} {printItem "itm_money"}, {print {item "itm_mushroom"}} {printItem "itm_mushroom"}.
 """
 NAME storageLogic
 
@@ -574,7 +627,13 @@ NAME wildSlotLogic9
 VAR var_temp
 0
 
-VAR var_calendar_date
+VAR var_goalMoney
+10
+
+VAR var_goalLimitDate
+5
+
+VAR var_calendarDate
 1
 
 VAR var_mashroomSellCacheCount
