@@ -10,9 +10,37 @@ NAME blueprint
 128,159,255
 255,255,255
 
+PAL pal_farm
+NAME farm
+110,200,95
+162,130,47
+255,255,255
+
+ROOM rm_farm
+fc,fh,fh,fh,fh,gr,gr,fh,fh,fh,fh,fh,fh,fh,fh,fc
+fl,gr,gr,gr,gr,gr,gr,gr,gr,gr,gr,gr,gr,gr,gr,fr
+fl,gr,gr,gr,gr,gr,gr,fd,fd,fd,fd,fd,fd,fd,fd,fr
+fl,gr,gr,gr,gr,gr,gr,fd,fd,ec,eh,eh,eh,ec,fd,fr
+fl,gr,gr,gr,gr,gr,gr,fd,fd,ev,f0,f0,f0,ev,fd,fr
+fl,gr,gr,gr,gr,gr,gr,fd,fd,fd,f0,f0,f0,ev,fd,fr
+fl,gr,gr,gr,gr,gr,gr,fd,fd,ev,f0,f0,f0,ev,fd,fr
+fl,gr,gr,gr,gr,gr,gr,fd,fd,ec,eh,eh,eh,ec,fd,fr
+fl,gr,gr,gr,gr,gr,gr,fd,fd,fd,fd,fd,fd,fd,fd,fr
+fl,gr,gr,gr,gr,gr,gr,fd,fd,ec,eh,eh,eh,ec,fd,fr
+fl,gr,gr,gr,gr,gr,gr,fd,fd,ev,f1,f1,f1,ev,fd,fr
+fl,gr,gr,gr,gr,gr,gr,fd,fd,fd,f1,f1,f1,ev,fd,fr
+fl,gr,gr,gr,gr,gr,gr,fd,fd,ev,f1,f1,f1,ev,fd,fr
+fl,gr,gr,gr,gr,gr,gr,fd,fd,ec,eh,eh,eh,ec,fd,fr
+fl,gr,gr,gr,gr,gr,gr,fd,fd,fd,fd,fd,fd,fd,fd,fr
+fc,fh,fh,fh,fh,ex,ex,fh,fh,fh,fh,fh,fh,fh,fh,fc
+NAME home
+EXT 4,13 rm_forest 4,3
+PAL pal_farm
+
 ROOM rm_home
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 0,a,a,a,a,a,a,a,a,a,a,a,a,a,a,0
+0,a,0,0,ex,0,0,0,0,0,0,0,0,0,a,0
 0,a,0,0,0,0,0,0,0,0,0,0,0,0,a,0
 0,a,0,0,0,0,0,0,0,0,0,0,0,0,a,0
 0,a,0,0,0,0,0,0,0,0,0,0,0,0,a,0
@@ -24,17 +52,16 @@ ROOM rm_home
 0,a,0,0,0,0,0,0,0,0,0,0,0,0,a,0
 0,a,0,0,0,0,0,0,0,0,0,0,0,0,a,0
 0,a,0,0,0,0,0,0,0,0,0,0,0,0,a,0
-0,a,0,0,e,0,0,0,0,0,0,0,0,0,a,0
 0,a,a,a,a,a,a,a,a,a,a,a,a,a,a,0
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 NAME home
-EXT 4,13 rm_forest 4,3
+EXT 4,2 rm_farm 4,12
 PAL 0
 
 ROOM rm_forest
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 0,a,a,a,a,a,a,a,a,a,a,a,a,a,a,0
-0,a,0,0,e,0,0,0,0,0,0,0,0,0,a,0
+0,a,0,0,ex,0,0,0,0,0,0,0,0,0,a,0
 0,a,0,0,0,0,0,0,0,0,0,0,0,0,a,0
 0,a,0,0,0,0,0,0,0,0,0,0,0,0,a,0
 0,a,0,0,0,0,0,0,0,0,0,0,0,0,a,0
@@ -49,7 +76,7 @@ ROOM rm_forest
 0,a,a,a,a,a,a,a,a,a,a,a,a,a,a,0
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 NAME forest
-EXT 4,2 rm_home 4,12
+EXT 4,2 rm_farm 4,12
 PAL 0
 
 ROOM rm_start
@@ -60,7 +87,7 @@ ROOM rm_start
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 0,0,0,0,a,a,a,a,a,a,0,0,0,0,0,0
-0,0,0,0,a,0,0,0,e,a,0,0,0,0,0,0
+0,0,0,0,a,0,0,0,0,a,0,0,0,0,0,0
 0,0,0,0,a,a,a,0,a,a,0,0,0,0,0,0
 0,0,0,0,0,0,a,a,a,0,0,0,0,0,0,0
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
@@ -70,7 +97,7 @@ ROOM rm_start
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 NAME start
-EXT 8,7 rm_home 7,4 DLG dlg_newDay
+EXT 8,7 rm_farm 7,4 DLG dlg_newDay
 PAL 0
 
 ROOM rm_reachGoal
@@ -125,7 +152,7 @@ TIL a
 NAME block
 WAL true
 
-TIL e
+TIL ex
 11111111
 00000001
 00010001
@@ -135,6 +162,136 @@ TIL e
 00010001
 11111111
 NAME exit
+
+TIL gr
+00000000
+01010000
+00100000
+00000000
+00001010
+00000100
+00000000
+00000000
+NAME grass
+
+TIL fh
+00000000
+01100110
+11111111
+11111111
+01100110
+01100110
+01100110
+01100110
+NAME fench_horizontal
+WAL true
+
+TIL fc
+00000000
+00011000
+01111110
+01111110
+00011000
+00011000
+00011000
+00011000
+NAME fench_corner
+WAL true
+
+TIL fl
+00010000
+00011000
+00011000
+00010000
+00010000
+00011000
+00011000
+00010000
+NAME fench_left
+WAL true
+
+TIL fr
+00001000
+00011000
+00011000
+00001000
+00001000
+00011000
+00011000
+00001000
+NAME fence_right
+WAL true
+
+TIL f0
+00000000
+01000010
+00100100
+00011000
+00011000
+00100100
+01000010
+00000000
+NAME fieldSlotCildren0
+
+TIL f1
+00000000
+01000010
+00100100
+00011000
+00011000
+00100100
+01000010
+00000000
+NAME fieldSlotCildren1
+
+TIL ev
+00010000
+00001000
+00010000
+00001000
+00010000
+00001000
+00010000
+00001000
+NAME fieldEdge_vertical
+WAL true
+
+TIL eh
+00000000
+00000000
+00000000
+10101010
+01010101
+00000000
+00000000
+00000000
+NAME fieldEdge_horizontal
+WAL true
+
+TIL ec
+00000000
+00010000
+00001000
+01010100
+00101010
+00010000
+00001000
+00000000
+NAME fieldEdge_corner
+WAL true
+
+TIL fd
+00000000
+00000000
+00010000
+00000000
+00000010
+00100000
+00000000
+00000000
+NAME fieldDirt
+
+
 
 SPR A
 00011000
@@ -149,6 +306,30 @@ POS rm_start 5,7
 ITM itm_money 10
 ITM itm_mushroom 5
 
+SPR spr_fieldSlot_0
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+01111110
+10000001
+NAME fieldSlot0
+DLG dlg_fieldLogic_0
+
+SPR spr_fieldSlot_1
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+01111110
+10000001
+NAME fieldSlot1
+DLG dlg_fieldLogic_1
+
 SPR spr_bed_0
 00000000
 00000000
@@ -160,7 +341,7 @@ SPR spr_bed_0
 10000000
 NAME bed0
 DLG dlg_newDay
-POS rm_home 3,2
+POS rm_farm 3,2
 
 SPR spr_bed_1
 00000000
@@ -173,9 +354,9 @@ SPR spr_bed_1
 00000001
 NAME bed1
 DLG dlg_newDay
-POS rm_home 4,2
+POS rm_farm 4,2
 
-SPR spr_fieldSlot_0
+SPR spr_fieldSlot_empty
 00000000
 00000000
 00000000
@@ -184,9 +365,7 @@ SPR spr_fieldSlot_0
 00000000
 01111110
 10000001
-NAME fieldSlot0
-DLG dlg_fieldLogic_0
-POS rm_home 2,6
+NAME fieldSlot_empty
 
 SPR spr_fieldSlot_prepare
 00000000
@@ -210,20 +389,7 @@ SPR spr_fieldSlot_harvest
 10000001
 NAME fieldSlot_harvest
 
-SPR spr_fieldUpgrader_0
-00111000
-01010100
-10010010
-00010000
-00010000
-00010000
-00010000
-00010000
-NAME fieldUpgrader0
-DLG dlg_fieldUpgrader_0
-POS rm_home 2,4
-
-SPR spr_cacheAllButton
+SPR spr_cacheButton
 01000000
 11100000
 01000000
@@ -232,10 +398,9 @@ SPR spr_cacheAllButton
 10101010
 11101010
 10101111
-NAME cacheAllButton
-DLG dlg_cacheAllLogic
-POS rm_home 2,3
-
+NAME cacheButton
+DLG dlg_cacheLogic
+POS rm_farm 2,3
 
 SPR spr_wildSlot_0
 00000000
@@ -244,7 +409,7 @@ SPR spr_wildSlot_0
 00000000
 00000000
 00000000
-01111110
+00000000
 11111111
 NAME wildSlot0
 DLG dlg_wildSlotLogic_0
@@ -257,7 +422,7 @@ SPR spr_wildSlot_1
 00000000
 00000000
 00000000
-01111110
+00000000
 11111111
 NAME wildSlot1
 DLG dlg_wildSlotLogic_1
@@ -270,7 +435,7 @@ SPR spr_wildSlot_2
 00000000
 00000000
 00000000
-01111110
+00000000
 11111111
 NAME wildSlot2
 DLG dlg_wildSlotLogic_2
@@ -283,7 +448,7 @@ SPR spr_wildSlot_3
 00000000
 00000000
 00000000
-01111110
+00000000
 11111111
 NAME wildSlot3
 DLG dlg_wildSlotLogic_3
@@ -296,7 +461,7 @@ SPR spr_wildSlot_4
 00000000
 00000000
 00000000
-01111110
+00000000
 11111111
 NAME wildSlot4
 DLG dlg_wildSlotLogic_4
@@ -309,7 +474,7 @@ SPR spr_wildSlot_5
 00000000
 00000000
 00000000
-01111110
+00000000
 11111111
 NAME wildSlot5
 DLG dlg_wildSlotLogic_5
@@ -322,7 +487,7 @@ SPR spr_wildSlot_6
 00000000
 00000000
 00000000
-01111110
+00000000
 11111111
 NAME wildSlot6
 DLG dlg_wildSlotLogic_6
@@ -335,7 +500,7 @@ SPR spr_wildSlot_7
 00000000
 00000000
 00000000
-01111110
+00000000
 11111111
 NAME wildSlot7
 DLG dlg_wildSlotLogic_7
@@ -348,7 +513,7 @@ SPR spr_wildSlot_8
 00000000
 00000000
 00000000
-01111110
+00000000
 11111111
 NAME wildSlot8
 DLG dlg_wildSlotLogic_8
@@ -361,22 +526,22 @@ SPR spr_wildSlot_9
 00000000
 00000000
 00000000
-01111110
+00000000
 11111111
 NAME wildSlot9
 DLG dlg_wildSlotLogic_9
 POS rm_forest 11,13
 
-SPR spr_wildSlot_prepare
+SPR spr_wildSlot_empty
 00000000
 00000000
 00000000
-01111100
-10010010
-00010001
+00000000
+00000000
+00000000
 01111110
 11111111
-NAME wildSlot_prepare
+NAME wildSlot_empty
 
 SPR spr_wildSlot_harvest
 11111111
@@ -400,7 +565,74 @@ SPR spr_storage
 11111100
 NAME storage
 DLG dlg_storageLogic
-POS rm_home 5,2
+POS rm_farm 5,2
+
+ITM itm_mayor_start
+00011000
+00011000
+00011000
+00111100
+01111110
+10111101
+00100100
+00100100
+NAME mayor_start
+DLG dlg_mayor_start
+
+ITM itm_fieldSlotChildren_0
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+01111110
+10000001
+NAME fieldSlotChildren_0
+
+ITM itm_fieldSlotChildren_1
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+01111110
+10000001
+NAME fieldSlotChildren_1
+
+ITM itm_fieldSlotChildren_empty
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+01111110
+10000001
+NAME fieldSlotChildren_empty
+
+ITM itm_fieldSlotChildren_prepare
+00000000
+00000000
+00000000
+11111111
+00010000
+00010000
+01111110
+10000001
+NAME fieldSlotChildren_prepare
+
+ITM itm_fieldSlotChildren_harvest
+11111111
+00010000
+00010000
+00010000
+00010000
+00010000
+01111110
+10000001
+NAME fieldSlotChildren_harvest
 
 ITM itm_money
 00111100
@@ -423,7 +655,6 @@ ITM itm_mushroom
 00100100
 00111100
 NAME mushroom
-
 
 DLG dlg_newDay
 """
@@ -448,10 +679,26 @@ DLG dlg_newDay
     {var_mashroomSellCacheCount = 0}
 }{
   - var_fieldLevel_0 > 0 ?
-    {var_fieldState_0 = 1}
-    (image "SPR, spr_fieldSlot_0, spr_fieldSlot_harvest")
-  - else ?
-    {var_fieldState_0 = 0}
+    {var_fieldGrowState_0 = var_fieldGrowState_0 + 1}
+    {
+      - var_fieldGrowState_0 >= const_harvestGrowState ?
+        (image "SPR, spr_fieldSlot_0, spr_fieldSlot_harvest")
+        (image "ITM, itm_fieldSlotChildren_0, itm_fieldSlotChildren_harvest")
+      - else ?
+        (image "SPR, spr_fieldSlot_0, spr_fieldSlot_prepare")
+        (image "TIL, itm_fieldSlotChildren_0, itm_fieldSlotChildren_prepare")
+    }
+}{
+  - var_fieldLevel_1 > 0 ?
+    {var_fieldGrowState_1 = var_fieldGrowState_1 + 1}
+    {
+      - var_fieldGrowState_1 >= const_harvestGrowState ?
+        (image "SPR, spr_fieldSlot_1, spr_fieldSlot_harvest")
+        (image "ITM, itm_fieldSlotChildren_1, itm_fieldSlotChildren_harvest")
+      - else ?
+        (image "SPR, spr_fieldSlot_1, spr_fieldSlot_prepare")
+        (image "TIL, itm_fieldSlotChildren_1, itm_fieldSlotChildren_prepare")
+    }
 }{var_wildSlotState_0 = 0}{var_wildSlotState_1 = 0}{var_wildSlotState_2 = 0}{var_wildSlotState_3 = 0}{var_wildSlotState_4 = 0}{var_wildSlotState_5 = 0}{var_wildSlotState_6 = 0}{var_wildSlotState_7 = 0}{var_wildSlotState_8 = 0}{var_wildSlotState_9 = 0}{shuffle
   - {var_wildSlotState_2 = 1}{var_wildSlotState_4 = 1}{var_wildSlotState_5 = 1}{var_wildSlotState_6 = 1}{var_wildSlotState_7 = 1}{var_wildSlotState_8 = 1}
   - {var_wildSlotState_4 = 1}{var_wildSlotState_5 = 1}
@@ -468,90 +715,146 @@ DLG dlg_newDay
   - var_wildSlotState_0 > 0 ?
     (image "SPR, spr_wildSlot_0, spr_wildSlot_harvest")
   - else ?
-    (image "SPR, spr_wildSlot_0, spr_wildSlot_prepare")
+    (image "SPR, spr_wildSlot_0, spr_wildSlot_empty")
 }{
   - var_wildSlotState_1 > 0 ?
     (image "SPR, spr_wildSlot_1, spr_wildSlot_harvest")
   - else ?
-    (image "SPR, spr_wildSlot_1, spr_wildSlot_prepare")
+    (image "SPR, spr_wildSlot_1, spr_wildSlot_empty")
 }{
   - var_wildSlotState_2 > 0 ?
     (image "SPR, spr_wildSlot_2, spr_wildSlot_harvest")
   - else ?
-    (image "SPR, spr_wildSlot_2, spr_wildSlot_prepare")
+    (image "SPR, spr_wildSlot_2, spr_wildSlot_empty")
 }{
   - var_wildSlotState_3 > 0 ?
     (image "SPR, spr_wildSlot_3, spr_wildSlot_harvest")
   - else ?
-    (image "SPR, spr_wildSlot_3, spr_wildSlot_prepare")
+    (image "SPR, spr_wildSlot_3, spr_wildSlot_empty")
 }{
   - var_wildSlotState_4 > 0 ?
     (image "SPR, spr_wildSlot_4, spr_wildSlot_harvest")
   - else ?
-    (image "SPR, spr_wildSlot_4, spr_wildSlot_prepare")
+    (image "SPR, spr_wildSlot_4, spr_wildSlot_empty")
 }{
   - var_wildSlotState_5 > 0 ?
     (image "SPR, spr_wildSlot_5, spr_wildSlot_harvest")
   - else ?
-    (image "SPR, spr_wildSlot_5, spr_wildSlot_prepare")
+    (image "SPR, spr_wildSlot_5, spr_wildSlot_empty")
 }{
   - var_wildSlotState_6 > 0 ?
     (image "SPR, spr_wildSlot_6, spr_wildSlot_harvest")
   - else ?
-    (image "SPR, spr_wildSlot_6, spr_wildSlot_prepare")
+    (image "SPR, spr_wildSlot_6, spr_wildSlot_empty")
+}{
+  - var_wildSlotState_7 > 0 ?
+    (image "SPR, spr_wildSlot_7, spr_wildSlot_harvest")
+  - else ?
+    (image "SPR, spr_wildSlot_7, spr_wildSlot_empty")
+}{
+  - var_wildSlotState_8 > 0 ?
+    (image "SPR, spr_wildSlot_8, spr_wildSlot_harvest")
+  - else ?
+    (image "SPR, spr_wildSlot_8, spr_wildSlot_empty")
+}{
+  - var_wildSlotState_9 > 0 ?
+    (image "SPR, spr_wildSlot_9, spr_wildSlot_harvest")
+  - else ?
+    (image "SPR, spr_wildSlot_9, spr_wildSlot_empty")
 }
 """
 NAME newDay
+
+DLG dlg_mayor_start
+"""
+Welcome to the 10-day mashroom harvest festival. The goal is that you hold at least {print const_goalMoney} {printItem "itm_money"} at the 10-day end.
+"""
+NAME mayor_start
+
+DLG dlg_mayor_win
+"""
+Congratulation! You reach the goal with {item "itm_money"}} {printItem "itm_money"}. Please look forward to our next festival.
+"""
+NAME mayor_win
+
+DLG dlg_mayor_fail
+"""
+You only hold {item "itm_money"}} {printItem "itm_money"} and don't reach the goal. Please look forward to our next festival.
+"""
+NAME mayor_fail
 
 DLG dlg_fieldLogic_0
 """
 {
   - var_fieldLevel_0 == 0 ?
-    level is 0!
+    Unlock price is {print const_fieldUnlockPrice} {printItem "itm_money"}, do you want to unlock it?{choice
+      - Yes
+        {var_temp_choiceResult = 1}
+      - No
+        {var_temp_choiceResult = 0}
+    }{
+      - var_temp_choiceResult == 1 ?
+        {
+          - {item "itm_money"} >= const_fieldUnlockPrice ?
+            {var_fieldLevel_0 = var_fieldLevel_0 + 1}
+            You have unlocked the field.
+            {item "itm_money" {{item "itm_money"} - const_fieldUnlockPrice}}
+          - else ?
+            You only have {print {item "itm_money"}} {printItem "itm_money"}.
+        }
+    }
   - else ?
     {
-      - var_fieldState_0 == 1 ?
-        Have output! wait next day
-        {item "itm_mushroom" {{item "itm_mushroom"} + const_fieldOutputAmount_0 * var_fieldLevel_0}}
-        {var_fieldState_0 = 0}
-        (image "SPR, spr_fieldSlot_0, spr_fieldSlot_prepare")
+      - var_fieldGrowState_0 >= const_harvestGrowState ?
+        {var_temp = const_fieldOutputAmount * var_fieldLevel_0}
+        You gather {print var_temp} {printItem "itm_money"} from the field.
+        {item "itm_mushroom" {{item "itm_mushroom"} + var_temp}}
+        {var_fieldGrowState_0 = 0}
+        (image "SPR, spr_fieldSlot_0, spr_fieldSlot_empty")
+        (image "ITM, itm_fieldSlotChildren_0, itm_fieldSlotChildren_empty")
       - else ?
-        I said wait next day
+        This field is still growing.
     }
 }
 """
 NAME fieldLogic0
 
-DLG dlg_fieldUpgrader_0
+DLG dlg_fieldLogic_1
 """
 {
-  - var_fieldLevel_0 == 0 ?
-    Unlock price is {print var_fieldNextLevelPrice_0}{printItem "itm_money"}. 
+  - var_fieldLevel_1 == 0 ?
+    Unlock price is {print const_fieldUnlockPrice} {printItem "itm_money"}, do you want to unlock it?{choice
+      - Yes
+        {var_temp_choiceResult = 1}
+      - No
+        {var_temp_choiceResult = 0}
+    }{
+      - var_temp_choiceResult == 1 ?
+        {
+          - {item "itm_money"} >= const_fieldUnlockPrice ?
+            {var_temp = const_fieldOutputAmount * var_fieldLevel_1}
+            You gather {print var_temp} {printItem "itm_money"} from the field.
+            {item "itm_mushroom" {{item "itm_mushroom"} + var_temp}}
+          - else ?
+            You only have {print {item "itm_money"}} {printItem "itm_money"}.
+        }
+    }
   - else ?
-    Next level price is {print var_fieldNextLevelPrice_0}{printItem "itm_money"}.  
-}{choice
-  - Yes
-    {var_temp_choiceResult = 1}
-  - No
-    {var_temp_choiceResult = 0}
-}{
-  - var_temp_choiceResult == 1 ?
     {
-      - {item "itm_money"} >= var_fieldNextLevelPrice_0 ?
-        {var_fieldLevel_0 = var_fieldLevel_0 + 1}
-        You upgrade it to {print var_fieldLevel_0}.
-        {item "itm_money" {{item "itm_money"} - var_fieldNextLevelPrice_0}}
-        {var_fieldNextLevelPrice_0 = var_fieldNextLevelPrice_0 + var_fieldLevel_0 * 2}
+      - var_fieldGrowState_1 == 1 ?
+        Have output! wait next day
+        {item "itm_mushroom" {{item "itm_mushroom"} + const_fieldOutputAmount * var_fieldLevel_1}}
+        {var_fieldGrowState_1 = 0}
+        (image "SPR, spr_fieldSlot_1, spr_fieldSlot_prepare")
+        (image "ITM, itm_fieldSlotChildren_1, itm_fieldSlotChildren_empty")
       - else ?
-        You only have {print {item "itm_money"}}{printItem "itm_money"}.
+        This field is still growing.
     }
 }
-
-
 """
-NAME fieldUpgrader0
+NAME fieldLogic1
 
-DLG dlg_cacheAllLogic
+DLG dlg_cacheLogic
 """
 Put {printItem "itm_mushroom"} to sellCache? {choice
   - All
@@ -582,8 +885,7 @@ Put {printItem "itm_mushroom"} to sellCache? {choice
     }
 }
 """
-NAME cacheAllLogic
-
+NAME cacheLogic
 
 DLG dlg_storageLogic
 """
@@ -598,7 +900,7 @@ DLG dlg_wildSlotLogic_0
     Have output! wait someday later
     {item "itm_mushroom" {{item "itm_mushroom"} + 1}}
     {var_wildSlotState_0 = 0}
-    (image "SPR, spr_wildSlot_0, spr_wildSlot_prepare")
+    (image "SPR, spr_wildSlot_0, spr_wildSlot_empty")
   - else ?
     Here is empty!
 }
@@ -612,7 +914,7 @@ DLG dlg_wildSlotLogic_1
     Have output! wait someday later
     {item "itm_mushroom" {{item "itm_mushroom"} + 1}}
     {var_wildSlotState_1 = 0}
-    (image "SPR, spr_wildSlot_1, spr_wildSlot_prepare")
+    (image "SPR, spr_wildSlot_1, spr_wildSlot_empty")
   - else ?
     Here is empty!
 }
@@ -626,7 +928,7 @@ DLG dlg_wildSlotLogic_2
     Have output! wait someday later
     {item "itm_mushroom" {{item "itm_mushroom"} + 1}}
     {var_wildSlotState_2 = 0}
-    (image "SPR, spr_wildSlot_2, spr_wildSlot_prepare")
+    (image "SPR, spr_wildSlot_2, spr_wildSlot_empty")
   - else ?
     Here is empty!
 }
@@ -640,7 +942,7 @@ DLG dlg_wildSlotLogic_3
     Have output! wait someday later
     {item "itm_mushroom" {{item "itm_mushroom"} + 1}}
     {var_wildSlotState_3 = 0}
-    (image "SPR, spr_wildSlot_3, spr_wildSlot_prepare")
+    (image "SPR, spr_wildSlot_3, spr_wildSlot_empty")
   - else ?
     Here is empty!
 }
@@ -654,7 +956,7 @@ DLG dlg_wildSlotLogic_4
     Have output! wait someday later
     {item "itm_mushroom" {{item "itm_mushroom"} + 1}}
     {var_wildSlotState_4 = 0}
-    (image "SPR, spr_wildSlot_4, spr_wildSlot_prepare")
+    (image "SPR, spr_wildSlot_4, spr_wildSlot_empty")
   - else ?
     Here is empty!
 }
@@ -668,7 +970,7 @@ DLG dlg_wildSlotLogic_5
     Have output! wait someday later
     {item "itm_mushroom" {{item "itm_mushroom"} + 1}}
     {var_wildSlotState_5 = 0}
-    (image "SPR, spr_wildSlot_5, spr_wildSlot_prepare")
+    (image "SPR, spr_wildSlot_5, spr_wildSlot_empty")
   - else ?
     Here is empty!
 }
@@ -682,7 +984,7 @@ DLG dlg_wildSlotLogic_6
     Have output! wait someday later
     {item "itm_mushroom" {{item "itm_mushroom"} + 1}}
     {var_wildSlotState_6 = 0}
-    (image "SPR, spr_wildSlot_6, spr_wildSlot_prepare")
+    (image "SPR, spr_wildSlot_6, spr_wildSlot_empty")
   - else ?
     Here is empty!
 }
@@ -696,7 +998,7 @@ DLG dlg_wildSlotLogic_7
     Have output! wait someday later
     {item "itm_mushroom" {{item "itm_mushroom"} + 1}}
     {var_wildSlotState_7 = 0}
-    (image "SPR, spr_wildSlot_7, spr_wildSlot_prepare")
+    (image "SPR, spr_wildSlot_7, spr_wildSlot_empty")
   - else ?
     Here is empty!
 }
@@ -710,7 +1012,7 @@ DLG dlg_wildSlotLogic_8
     Have output! wait someday later
     {item "itm_mushroom" {{item "itm_mushroom"} + 1}}
     {var_wildSlotState_8 = 0}
-    (image "SPR, spr_wildSlot_8, spr_wildSlot_prepare")
+    (image "SPR, spr_wildSlot_8, spr_wildSlot_empty")
   - else ?
     Here is empty!
 }
@@ -724,7 +1026,7 @@ DLG dlg_wildSlotLogic_9
     Have output! wait someday later
     {item "itm_mushroom" {{item "itm_mushroom"} + 1}}
     {var_wildSlotState_9 = 0}
-    (image "SPR, spr_wildSlot_9, spr_wildSlot_prepare")
+    (image "SPR, spr_wildSlot_9, spr_wildSlot_empty")
   - else ?
     Here is empty!
 }
@@ -737,6 +1039,9 @@ VAR var_temp_choiceResult
 VAR var_temp
 0
 
+VAR const_harvestGrowState
+2
+
 VAR const_goalMoney
 10
 
@@ -744,24 +1049,30 @@ VAR const_goalLimitDate
 5
 
 VAR var_calendarDate
-1
+0
 
 VAR var_mashroomSellCacheCount
 0
 
 VAR const_mashroomSellPrice
-5
+1
 
-VAR var_fieldNextLevelPrice_0
+VAR const_fieldUnlockPrice
 5
 
 VAR var_fieldLevel_0
-1
+0
 
-VAR var_fieldState_0
-1
+VAR var_fieldGrowState_0
+0
 
-VAR const_fieldOutputAmount_0
+VAR var_fieldLevel_1
+0
+
+VAR var_fieldGrowState_1
+0
+
+VAR const_fieldOutputAmount
 5
 
 VAR var_wildSlotState_0
@@ -793,5 +1104,4 @@ VAR var_wildSlotState_8
 
 VAR var_wildSlotState_9
 1
-
 
