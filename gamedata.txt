@@ -16,11 +16,17 @@ NAME farm
 162,130,47
 255,255,255
 
+PAL pam
+NAME home
+0,82,204
+162,130,47
+255,255,255
+
 ROOM rm_farm
-fc,fh,fh,fh,fh,gr,gr,fh,fh,fh,fh,fh,fh,fh,fh,fc
-fl,gr,gr,gr,gr,gr,gr,gr,gr,gr,gr,gr,gr,gr,gr,fr
-fl,gr,gr,gr,gr,gr,gr,fd,fd,fd,fd,fd,fd,fd,fd,fr
-fl,gr,gr,gr,gr,gr,gr,fd,fd,ec,eh,eh,eh,ec,fd,fr
+fc,h16,h17,h18,fh,gr,gr,fh,fh,fh,fh,fh,fh,fh,fh,fc
+fl,h13,h14,h15,gr,gr,gr,gr,gr,gr,gr,gr,gr,gr,gr,fr
+fl,h10,h11,h12,gr,gr,gr,fd,fd,fd,fd,fd,fd,fd,fd,fr
+fl,h00,h01,h02,gr,gr,gr,fd,fd,ec,eh,eh,eh,ec,fd,fr
 fl,gr,gr,gr,gr,gr,gr,fd,fd,ev,f0,f0,f0,ev,fd,fr
 fl,gr,gr,gr,gr,gr,gr,fd,fd,fd,f0,f0,f0,ev,fd,fr
 fl,gr,gr,gr,gr,gr,gr,fd,fd,ev,f0,f0,f0,ev,fd,fr
@@ -35,28 +41,29 @@ fl,gr,gr,gr,gr,gr,gr,fd,fd,fd,fd,fd,fd,fd,fd,fr
 fc,fh,fh,fh,fh,ex,ex,fh,fh,fh,fh,fh,fh,fh,fh,fc
 NAME home
 EXT 4,13 rm_forest 4,3
+EXT 1,5 rm_home 9,12
 PAL pal_farm
 
 ROOM rm_home
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-0,a,a,a,a,a,a,a,a,a,a,a,a,a,a,0
-0,a,0,0,ex,0,0,0,0,0,0,0,0,0,a,0
-0,a,0,0,0,0,0,0,0,0,0,0,0,0,a,0
-0,a,0,0,0,0,0,0,0,0,0,0,0,0,a,0
-0,a,0,0,0,0,0,0,0,0,0,0,0,0,a,0
-0,a,0,0,0,0,0,0,0,0,0,0,0,0,a,0
-0,a,0,0,0,0,0,0,0,0,0,0,0,0,a,0
-0,a,0,0,0,0,0,0,0,0,0,0,0,0,a,0
-0,a,0,0,0,0,0,0,0,0,0,0,0,0,a,0
-0,a,0,0,0,0,0,0,0,0,0,0,0,0,a,0
-0,a,0,0,0,0,0,0,0,0,0,0,0,0,a,0
-0,a,0,0,0,0,0,0,0,0,0,0,0,0,a,0
-0,a,0,0,0,0,0,0,0,0,0,0,0,0,a,0
-0,a,a,a,a,a,a,a,a,a,a,a,a,a,a,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,a,gs,gs,gs,gs,gs,gs,gs,gs,a,0,0,0
+0,0,0,a,gu,gu,gu,gu,gs,gu,gu,gu,a,0,0,0
+0,0,0,a,0,0,0,0,0,0,0,0,a,0,0,0
+0,0,0,a,0,0,0,0,0,0,0,0,a,0,0,0
+0,0,0,a,0,0,0,0,0,0,0,0,a,0,0,0
+0,0,0,a,0,0,0,0,0,0,0,0,a,0,0,0
+0,0,0,a,gs,gs,gs,gs,gs,0,gt,gs,gs,0,0,0
+0,0,0,a,gu,gu,gu,gu,gu,0,gv,gu,gu,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 NAME home
-EXT 4,2 rm_farm 4,12
-PAL 0
+EXT 9,12 rm_farm 1,5
+PAL pam
 
 ROOM rm_forest
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
@@ -97,7 +104,7 @@ ROOM rm_start
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 NAME start
-EXT 8,7 rm_farm 7,4 DLG dlg_newDay
+EXT 8,7 rm_farm 6,0 DLG dlg_newDay
 PAL 0
 
 ROOM rm_reachGoal
@@ -291,7 +298,185 @@ TIL fd
 00000000
 NAME fieldDirt
 
+TIL gs
+11111111
+00010101
+01010001
+00010001
+00011001
+00010001
+10010001
+00010011
+NAME homeWallTop
+WAL true
 
+TIL gt
+11111111
+10010101
+11010001
+10010001
+10011001
+10010001
+10010001
+10010011
+NAME homeWallLefTopt
+WAL true
+
+TIL gu
+00010001
+00010101
+01010001
+00010001
+00011001
+00010001
+10010001
+11111111
+NAME homeWallDown
+WAL true
+
+TIL gv
+10010001
+10010101
+11010001
+10010001
+10011001
+10010001
+10010001
+11111111
+NAME homeWallLefDown
+WAL true
+
+TIL h00
+10100000
+10100010
+10100010
+10100000
+10100000
+10100000
+10100000
+11111111
+NAME house00
+
+TIL h01
+10010001
+10011111
+10010001
+10010001
+10011111
+10000000
+10000000
+11111111
+NAME house01
+
+TIL h02
+00010001
+11110001
+00010001
+00010001
+11110001
+00000001
+00000001
+11111111
+NAME house02
+
+TIL h10
+11111111
+10000000
+11111111
+10000000
+10111111
+10100000
+10100000
+10100000
+NAME house10
+
+TIL h11
+11111111
+00000000
+11111111
+00000000
+10000000
+10000000
+10011111
+10010001
+NAME house11
+
+TIL h12
+11111111
+00000001
+11111111
+00000001
+00000001
+00000001
+11110001
+00010001
+NAME house12
+
+TIL h13
+10010010
+10010011
+10011100
+10110000
+11000000
+10000000
+10000000
+10000000
+NAME house20
+
+TIL h14
+00100100
+11111111
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+NAME house21
+
+TIL h15
+01001001
+11101001
+00011001
+00000101
+00000011
+00000001
+00000001
+00000001
+NAME house22
+
+TIL h16
+00001111
+00110010
+11010010
+10010010
+10010010
+10010010
+10010010
+10010010
+NAME house30
+
+TIL h17
+11111111
+00100100
+00100100
+00100100
+00100100
+00100100
+00100100
+00100100
+NAME house31
+
+TIL h18
+11110000
+01001100
+01001011
+01001001
+01001001
+01001001
+01001001
+01001001
+NAME house32
 
 SPR A
 00011000
@@ -331,30 +516,82 @@ NAME fieldSlot1
 DLG dlg_fieldLogic_1
 
 SPR spr_bed_0
-00000000
-00000000
-00000000
-00000000
+00111111
+01000000
+01000000
+01000000
 01111111
-10000000
-11111111
-10000000
+01001000
+01010000
+01010000
 NAME bed0
 DLG dlg_newDay
-POS rm_farm 3,2
+POS rm_home 10,7
 
 SPR spr_bed_1
-00000000
-00000000
-00000001
-00000001
-11011101
-00100011
-11111111
-00000001
+11111100
+00000010
+00000010
+00000010
+11111110
+00010010
+00001010
+00001010
 NAME bed1
 DLG dlg_newDay
-POS rm_farm 4,2
+POS rm_home 11,7
+
+SPR spr_bed_2
+01010000
+01001000
+01111111
+01000000
+01000000
+01000000
+01000000
+01000000
+NAME bed2
+DLG dlg_newDay
+POS rm_home 10,8
+
+SPR spr_bed_3
+00001010
+00010010
+11111110
+00000010
+00000010
+00000010
+00000010
+00000010
+NAME bed3
+DLG dlg_newDay
+POS rm_home 11,8
+
+SPR spr_bed_4
+01000000
+01000000
+01000000
+01000000
+01000000
+01000000
+01000000
+00111111
+NAME bed4
+DLG dlg_newDay
+POS rm_home 10,9
+
+SPR spr_bed_5
+00000010
+00000010
+00000010
+00000010
+00000010
+00000010
+00000010
+11111110
+NAME bed5
+DLG dlg_newDay
+POS rm_home 11,9
 
 SPR spr_fieldSlot_empty
 00000000
@@ -400,7 +637,7 @@ SPR spr_cacheButton
 10101111
 NAME cacheButton
 DLG dlg_cacheLogic
-POS rm_farm 2,3
+POS rm_farm 2,7
 
 SPR spr_wildSlot_0
 00000000
@@ -555,17 +792,103 @@ SPR spr_wildSlot_harvest
 NAME wildSlot_harvest
 
 SPR spr_storage
+10000010
+10000001
+10000000
+10000000
+10000000
+11111111
 00000000
 00000000
-01111111
-01000001
-11111101
-10000101
-10000111
-11111100
-NAME storage
+NAME storage2
 DLG dlg_storageLogic
-POS rm_farm 5,2
+POS rm_home 4,7
+
+SPR spw
+00000010
+11111111
+10000001
+10110001
+10000001
+10000001
+11111111
+00000010
+NAME tableRight
+DLG dlh
+POS rm_home 9,7
+
+SPR spx
+11111110
+00000010
+11111010
+00001010
+00001010
+00001010
+00001010
+11111010
+NAME tvRight
+DLG dli
+POS rm_home 9,6
+
+SPR spy
+01111111
+01000000
+01011111
+01010000
+01010000
+01010000
+01010000
+01011111
+NAME tvLeft
+POS rm_home 8,6
+
+SPR spz
+01000000
+11111111
+10000001
+10001101
+10000001
+10000001
+11111111
+01000000
+NAME tableLeft
+POS rm_home 8,7
+
+SPR sq0
+01000001
+10000001
+00000001
+00000001
+00000001
+11111111
+00000000
+00000000
+NAME storage3
+POS rm_home 5,7
+
+SPR sq1
+11111111
+00000001
+00000001
+00000001
+11111111
+00000001
+00000001
+11111111
+NAME storage1
+POS rm_home 5,6
+
+SPR sq2
+11111111
+10000000
+10000000
+10000000
+11111111
+10000000
+10000000
+11111111
+NAME storage0
+POS rm_home 4,6
 
 ITM itm_mayor_start
 00011000
@@ -658,109 +981,117 @@ NAME mushroom
 
 DLG dlg_newDay
 """
-{var_calendarDate = var_calendarDate + 1}
-{
-  - var_calendarDate == const_goalLimitDate ?
-    {
-      - {item "itm_money"} >= const_goalMoney ?
-        You reach the goal!{pg}
-        (exitNow "rm_reachGoal")
-      - else ? 
-        You don't reach the goal!{pg}
-        (exitNow "rm_notReachGoal")
-    }
-  - else ?
-    {print var_calendarDate}th day come...
+Finish today?{choice
+  - Yes
+    {var_temp_choiceResult = 1}
+  - No
+    {var_temp_choiceResult = 0}
 }{
-  - var_mashroomSellCacheCount > 0 ?
-    {var_temp = var_mashroomSellCacheCount * const_mashroomSellPrice}
-    You sell {print var_mashroomSellCacheCount} {printItem "itm_mushroom"} and gain {print var_temp} {printItem "itm_money"}.
-    {item "itm_money" {{item "itm_money"} + var_temp}}
-    {var_mashroomSellCacheCount = 0}
-}{
-  - var_fieldLevel_0 > 0 ?
-    {var_fieldGrowState_0 = var_fieldGrowState_0 + 1}
-    {
-      - var_fieldGrowState_0 >= const_harvestGrowState ?
-        (image "SPR, spr_fieldSlot_0, spr_fieldSlot_harvest")
-        (image "ITM, itm_fieldSlotChildren_0, itm_fieldSlotChildren_harvest")
-      - else ?
-        (image "SPR, spr_fieldSlot_0, spr_fieldSlot_prepare")
-        (image "TIL, itm_fieldSlotChildren_0, itm_fieldSlotChildren_prepare")
-    }
-}{
-  - var_fieldLevel_1 > 0 ?
-    {var_fieldGrowState_1 = var_fieldGrowState_1 + 1}
-    {
-      - var_fieldGrowState_1 >= const_harvestGrowState ?
-        (image "SPR, spr_fieldSlot_1, spr_fieldSlot_harvest")
-        (image "ITM, itm_fieldSlotChildren_1, itm_fieldSlotChildren_harvest")
-      - else ?
-        (image "SPR, spr_fieldSlot_1, spr_fieldSlot_prepare")
-        (image "TIL, itm_fieldSlotChildren_1, itm_fieldSlotChildren_prepare")
-    }
-}{var_wildSlotState_0 = 0}{var_wildSlotState_1 = 0}{var_wildSlotState_2 = 0}{var_wildSlotState_3 = 0}{var_wildSlotState_4 = 0}{var_wildSlotState_5 = 0}{var_wildSlotState_6 = 0}{var_wildSlotState_7 = 0}{var_wildSlotState_8 = 0}{var_wildSlotState_9 = 0}{shuffle
-  - {var_wildSlotState_2 = 1}{var_wildSlotState_4 = 1}{var_wildSlotState_5 = 1}{var_wildSlotState_6 = 1}{var_wildSlotState_7 = 1}{var_wildSlotState_8 = 1}
-  - {var_wildSlotState_4 = 1}{var_wildSlotState_5 = 1}
-  - {var_wildSlotState_0 = 1}{var_wildSlotState_4 = 1}{var_wildSlotState_5 = 1}{var_wildSlotState_7 = 1}{var_wildSlotState_9 = 1}
-  - {var_wildSlotState_2 = 1}{var_wildSlotState_4 = 1}{var_wildSlotState_8 = 1}{var_wildSlotState_9 = 1}
-  - {var_wildSlotState_1 = 1}{var_wildSlotState_3 = 1}{var_wildSlotState_6 = 1}
-  - {var_wildSlotState_0 = 1}{var_wildSlotState_3 = 1}{var_wildSlotState_4 = 1}{var_wildSlotState_7 = 1}
-  - 
-  - {var_wildSlotState_0 = 1}{var_wildSlotState_2 = 1}{var_wildSlotState_8 = 1}
-  - {var_wildSlotState_0 = 1}{var_wildSlotState_6 = 1}{var_wildSlotState_7 = 1}{var_wildSlotState_9 = 1}
-  - {var_wildSlotState_5 = 1}{var_wildSlotState_7 = 1}
-  - {var_wildSlotState_0 = 1}{var_wildSlotState_3 = 1}{var_wildSlotState_4 = 1}{var_wildSlotState_9 = 1}
-}{
-  - var_wildSlotState_0 > 0 ?
-    (image "SPR, spr_wildSlot_0, spr_wildSlot_harvest")
-  - else ?
-    (image "SPR, spr_wildSlot_0, spr_wildSlot_empty")
-}{
-  - var_wildSlotState_1 > 0 ?
-    (image "SPR, spr_wildSlot_1, spr_wildSlot_harvest")
-  - else ?
-    (image "SPR, spr_wildSlot_1, spr_wildSlot_empty")
-}{
-  - var_wildSlotState_2 > 0 ?
-    (image "SPR, spr_wildSlot_2, spr_wildSlot_harvest")
-  - else ?
-    (image "SPR, spr_wildSlot_2, spr_wildSlot_empty")
-}{
-  - var_wildSlotState_3 > 0 ?
-    (image "SPR, spr_wildSlot_3, spr_wildSlot_harvest")
-  - else ?
-    (image "SPR, spr_wildSlot_3, spr_wildSlot_empty")
-}{
-  - var_wildSlotState_4 > 0 ?
-    (image "SPR, spr_wildSlot_4, spr_wildSlot_harvest")
-  - else ?
-    (image "SPR, spr_wildSlot_4, spr_wildSlot_empty")
-}{
-  - var_wildSlotState_5 > 0 ?
-    (image "SPR, spr_wildSlot_5, spr_wildSlot_harvest")
-  - else ?
-    (image "SPR, spr_wildSlot_5, spr_wildSlot_empty")
-}{
-  - var_wildSlotState_6 > 0 ?
-    (image "SPR, spr_wildSlot_6, spr_wildSlot_harvest")
-  - else ?
-    (image "SPR, spr_wildSlot_6, spr_wildSlot_empty")
-}{
-  - var_wildSlotState_7 > 0 ?
-    (image "SPR, spr_wildSlot_7, spr_wildSlot_harvest")
-  - else ?
-    (image "SPR, spr_wildSlot_7, spr_wildSlot_empty")
-}{
-  - var_wildSlotState_8 > 0 ?
-    (image "SPR, spr_wildSlot_8, spr_wildSlot_harvest")
-  - else ?
-    (image "SPR, spr_wildSlot_8, spr_wildSlot_empty")
-}{
-  - var_wildSlotState_9 > 0 ?
-    (image "SPR, spr_wildSlot_9, spr_wildSlot_harvest")
-  - else ?
-    (image "SPR, spr_wildSlot_9, spr_wildSlot_empty")
+  - var_temp_choiceResult == 1 ?
+  {var_calendarDate = var_calendarDate + 1}
+  {
+    - var_calendarDate == const_goalLimitDate ?
+      {
+        - {item "itm_money"} >= const_goalMoney ?
+          You reach the goal!{pg}
+          (exitNow "rm_reachGoal")
+        - else ? 
+          You don't reach the goal!{pg}
+          (exitNow "rm_notReachGoal")
+      }
+    - else ?
+      {print var_calendarDate}th day come...
+  }{
+    - var_mashroomSellCacheCount > 0 ?
+      {var_temp = var_mashroomSellCacheCount * const_mashroomSellPrice}
+      You sell {print var_mashroomSellCacheCount} {printItem "itm_mushroom"} and gain {print var_temp} {printItem "itm_money"}.
+      {item "itm_money" {{item "itm_money"} + var_temp}}
+      {var_mashroomSellCacheCount = 0}
+  }{
+    - var_fieldLevel_0 > 0 ?
+      {var_fieldGrowState_0 = var_fieldGrowState_0 + 1}
+      {
+        - var_fieldGrowState_0 >= const_harvestGrowState ?
+          (image "SPR, spr_fieldSlot_0, spr_fieldSlot_harvest")
+          (image "ITM, itm_fieldSlotChildren_0, itm_fieldSlotChildren_harvest")
+        - else ?
+          (image "SPR, spr_fieldSlot_0, spr_fieldSlot_prepare")
+          (image "TIL, itm_fieldSlotChildren_0, itm_fieldSlotChildren_prepare")
+      }
+  }{
+    - var_fieldLevel_1 > 0 ?
+      {var_fieldGrowState_1 = var_fieldGrowState_1 + 1}
+      {
+        - var_fieldGrowState_1 >= const_harvestGrowState ?
+          (image "SPR, spr_fieldSlot_1, spr_fieldSlot_harvest")
+          (image "ITM, itm_fieldSlotChildren_1, itm_fieldSlotChildren_harvest")
+        - else ?
+          (image "SPR, spr_fieldSlot_1, spr_fieldSlot_prepare")
+          (image "TIL, itm_fieldSlotChildren_1, itm_fieldSlotChildren_prepare")
+      }
+  }{var_wildSlotState_0 = 0}{var_wildSlotState_1 = 0}{var_wildSlotState_2 = 0}{var_wildSlotState_3 = 0}{var_wildSlotState_4 = 0}{var_wildSlotState_5 = 0}{var_wildSlotState_6 = 0}{var_wildSlotState_7 = 0}{var_wildSlotState_8 = 0}{var_wildSlotState_9 = 0}{shuffle
+    - {var_wildSlotState_2 = 1}{var_wildSlotState_4 = 1}{var_wildSlotState_5 = 1}{var_wildSlotState_6 = 1}{var_wildSlotState_7 = 1}{var_wildSlotState_8 = 1}
+    - {var_wildSlotState_4 = 1}{var_wildSlotState_5 = 1}
+    - {var_wildSlotState_0 = 1}{var_wildSlotState_4 = 1}{var_wildSlotState_5 = 1}{var_wildSlotState_7 = 1}{var_wildSlotState_9 = 1}
+    - {var_wildSlotState_2 = 1}{var_wildSlotState_4 = 1}{var_wildSlotState_8 = 1}{var_wildSlotState_9 = 1}
+    - {var_wildSlotState_1 = 1}{var_wildSlotState_3 = 1}{var_wildSlotState_6 = 1}
+    - {var_wildSlotState_0 = 1}{var_wildSlotState_3 = 1}{var_wildSlotState_4 = 1}{var_wildSlotState_7 = 1}
+    - 
+    - {var_wildSlotState_0 = 1}{var_wildSlotState_2 = 1}{var_wildSlotState_8 = 1}
+    - {var_wildSlotState_0 = 1}{var_wildSlotState_6 = 1}{var_wildSlotState_7 = 1}{var_wildSlotState_9 = 1}
+    - {var_wildSlotState_5 = 1}{var_wildSlotState_7 = 1}
+    - {var_wildSlotState_0 = 1}{var_wildSlotState_3 = 1}{var_wildSlotState_4 = 1}{var_wildSlotState_9 = 1}
+  }{
+    - var_wildSlotState_0 > 0 ?
+      (image "SPR, spr_wildSlot_0, spr_wildSlot_harvest")
+    - else ?
+      (image "SPR, spr_wildSlot_0, spr_wildSlot_empty")
+  }{
+    - var_wildSlotState_1 > 0 ?
+      (image "SPR, spr_wildSlot_1, spr_wildSlot_harvest")
+    - else ?
+      (image "SPR, spr_wildSlot_1, spr_wildSlot_empty")
+  }{
+    - var_wildSlotState_2 > 0 ?
+      (image "SPR, spr_wildSlot_2, spr_wildSlot_harvest")
+    - else ?
+      (image "SPR, spr_wildSlot_2, spr_wildSlot_empty")
+  }{
+    - var_wildSlotState_3 > 0 ?
+      (image "SPR, spr_wildSlot_3, spr_wildSlot_harvest")
+    - else ?
+      (image "SPR, spr_wildSlot_3, spr_wildSlot_empty")
+  }{
+    - var_wildSlotState_4 > 0 ?
+      (image "SPR, spr_wildSlot_4, spr_wildSlot_harvest")
+    - else ?
+      (image "SPR, spr_wildSlot_4, spr_wildSlot_empty")
+  }{
+    - var_wildSlotState_5 > 0 ?
+      (image "SPR, spr_wildSlot_5, spr_wildSlot_harvest")
+    - else ?
+      (image "SPR, spr_wildSlot_5, spr_wildSlot_empty")
+  }{
+    - var_wildSlotState_6 > 0 ?
+      (image "SPR, spr_wildSlot_6, spr_wildSlot_harvest")
+    - else ?
+      (image "SPR, spr_wildSlot_6, spr_wildSlot_empty")
+  }{
+    - var_wildSlotState_7 > 0 ?
+      (image "SPR, spr_wildSlot_7, spr_wildSlot_harvest")
+    - else ?
+      (image "SPR, spr_wildSlot_7, spr_wildSlot_empty")
+  }{
+    - var_wildSlotState_8 > 0 ?
+      (image "SPR, spr_wildSlot_8, spr_wildSlot_harvest")
+    - else ?
+      (image "SPR, spr_wildSlot_8, spr_wildSlot_empty")
+  }{
+    - var_wildSlotState_9 > 0 ?
+      (image "SPR, spr_wildSlot_9, spr_wildSlot_harvest")
+    - else ?
+      (image "SPR, spr_wildSlot_9, spr_wildSlot_empty")
+  }
 }
 """
 NAME newDay
@@ -1032,6 +1363,10 @@ DLG dlg_wildSlotLogic_9
 }
 """
 NAME wildSlotLogic9
+
+DLG dig_table
+A tv.
+NAME table
 
 VAR var_temp_choiceResult
 1
