@@ -40,8 +40,25 @@ fl,gr,gr,gr,gr,gr,gr,fd,fd,ec,eh,eh,eh,ec,fd,fr
 fl,gr,gr,gr,gr,gr,gr,fd,fd,fd,fd,fd,fd,fd,fd,fr
 fc,fh,fh,fh,fh,ex,ex,fh,fh,fh,fh,fh,fh,fh,fh,fc
 NAME home
-EXT 4,13 rm_forest 4,3
-EXT 1,5 rm_home 9,12
+ITM itm_fieldSlotChildren_0 10,4
+ITM itm_fieldSlotChildren_0 11,4
+ITM itm_fieldSlotChildren_0 12,4
+ITM itm_fieldSlotChildren_0 12,5
+ITM itm_fieldSlotChildren_0 11,5
+ITM itm_fieldSlotChildren_0 10,6
+ITM itm_fieldSlotChildren_0 11,6
+ITM itm_fieldSlotChildren_0 12,6
+ITM itm_fieldSlotChildren_1 10,10
+ITM itm_fieldSlotChildren_1 11,10
+ITM itm_fieldSlotChildren_1 12,10
+ITM itm_fieldSlotChildren_1 12,11
+ITM itm_fieldSlotChildren_1 12,12
+ITM itm_fieldSlotChildren_1 11,12
+ITM itm_fieldSlotChildren_1 10,12
+ITM itm_fieldSlotChildren_1 11,11
+EXT 5,15 rm_forest 4,2
+EXT 6,15 rm_forest 5,2
+EXT 1,3 rm_home 9,11
 PAL pal_farm
 
 ROOM rm_home
@@ -62,13 +79,13 @@ ROOM rm_home
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 NAME home
-EXT 9,12 rm_farm 1,5
+EXT 9,12 rm_farm 1,4
 PAL pam
 
 ROOM rm_forest
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-0,a,a,a,a,a,a,a,a,a,a,a,a,a,a,0
-0,a,0,0,ex,0,0,0,0,0,0,0,0,0,a,0
+0,a,a,a,a,ex,ex,a,a,a,a,a,a,a,a,0
+0,a,0,0,0,0,0,0,0,0,0,0,0,0,a,0
 0,a,0,0,0,0,0,0,0,0,0,0,0,0,a,0
 0,a,0,0,0,0,0,0,0,0,0,0,0,0,a,0
 0,a,0,0,0,0,0,0,0,0,0,0,0,0,a,0
@@ -83,7 +100,8 @@ ROOM rm_forest
 0,a,a,a,a,a,a,a,a,a,a,a,a,a,a,0
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 NAME forest
-EXT 4,2 rm_farm 4,12
+EXT 4,1 rm_farm 5,15
+EXT 5,1 rm_farm 6,15
 PAL 0
 
 ROOM rm_start
@@ -367,6 +385,7 @@ TIL h01
 10000000
 11111111
 NAME house01
+WAL true
 
 TIL h02
 00010001
@@ -378,6 +397,7 @@ TIL h02
 00000001
 11111111
 NAME house02
+WAL true
 
 TIL h10
 11111111
@@ -389,6 +409,7 @@ TIL h10
 10100000
 10100000
 NAME house10
+WAL true
 
 TIL h11
 11111111
@@ -400,6 +421,7 @@ TIL h11
 10011111
 10010001
 NAME house11
+WAL true
 
 TIL h12
 11111111
@@ -411,6 +433,7 @@ TIL h12
 11110001
 00010001
 NAME house12
+WAL true
 
 TIL h13
 10010010
@@ -422,6 +445,7 @@ TIL h13
 10000000
 10000000
 NAME house20
+WAL true
 
 TIL h14
 00100100
@@ -433,6 +457,7 @@ TIL h14
 00000000
 00000000
 NAME house21
+WAL true
 
 TIL h15
 01001001
@@ -444,6 +469,7 @@ TIL h15
 00000001
 00000001
 NAME house22
+WAL true
 
 TIL h16
 00001111
@@ -455,6 +481,7 @@ TIL h16
 10010010
 10010010
 NAME house30
+WAL true
 
 TIL h17
 11111111
@@ -466,6 +493,7 @@ TIL h17
 00100100
 00100100
 NAME house31
+WAL true
 
 TIL h18
 11110000
@@ -477,6 +505,7 @@ TIL h18
 01001001
 01001001
 NAME house32
+WAL true
 
 SPR A
 00011000
@@ -495,25 +524,27 @@ SPR spr_fieldSlot_0
 00000000
 00000000
 00000000
-00000000
-00000000
-00000000
-01111110
-10000001
+01010001
+01001010
+00101010
+00101010
+00101010
 NAME fieldSlot0
 DLG dlg_fieldLogic_0
+POS rm_farm 10,5
 
 SPR spr_fieldSlot_1
 00000000
 00000000
 00000000
-00000000
-00000000
-00000000
-01111110
-10000001
+01010001
+01001010
+00101010
+00101010
+00101010
 NAME fieldSlot1
 DLG dlg_fieldLogic_1
+POS rm_farm 10,11
 
 SPR spr_bed_0
 00111111
@@ -906,22 +937,22 @@ ITM itm_fieldSlotChildren_0
 00000000
 00000000
 00000000
-00000000
-00000000
-00000000
-01111110
-10000001
+01010001
+01001010
+00101010
+00101010
+00101010
 NAME fieldSlotChildren_0
 
 ITM itm_fieldSlotChildren_1
 00000000
 00000000
 00000000
-00000000
-00000000
-00000000
-01111110
-10000001
+01010001
+01001010
+00101010
+00101010
+00101010
 NAME fieldSlotChildren_1
 
 ITM itm_fieldSlotChildren_empty
@@ -981,117 +1012,123 @@ NAME mushroom
 
 DLG dlg_newDay
 """
-Finish today?{choice
-  - Yes
+{
+  - var_skipNewDayChoice == 1 ?
+    {var_skipNewDayChoice = 0}
     {var_temp_choiceResult = 1}
-  - No
-    {var_temp_choiceResult = 0}
-}{
+  - else ?
+    Finish today?{choice
+      - Yes
+        {var_temp_choiceResult = 1}
+      - No
+        {var_temp_choiceResult = 0}
+    }
+}...{
   - var_temp_choiceResult == 1 ?
-  {var_calendarDate = var_calendarDate + 1}
-  {
-    - var_calendarDate == const_goalLimitDate ?
-      {
-        - {item "itm_money"} >= const_goalMoney ?
-          You reach the goal!{pg}
-          (exitNow "rm_reachGoal")
-        - else ? 
-          You don't reach the goal!{pg}
-          (exitNow "rm_notReachGoal")
-      }
-    - else ?
-      {print var_calendarDate}th day come...
-  }{
-    - var_mashroomSellCacheCount > 0 ?
-      {var_temp = var_mashroomSellCacheCount * const_mashroomSellPrice}
-      You sell {print var_mashroomSellCacheCount} {printItem "itm_mushroom"} and gain {print var_temp} {printItem "itm_money"}.
-      {item "itm_money" {{item "itm_money"} + var_temp}}
-      {var_mashroomSellCacheCount = 0}
-  }{
-    - var_fieldLevel_0 > 0 ?
-      {var_fieldGrowState_0 = var_fieldGrowState_0 + 1}
-      {
-        - var_fieldGrowState_0 >= const_harvestGrowState ?
-          (image "SPR, spr_fieldSlot_0, spr_fieldSlot_harvest")
-          (image "ITM, itm_fieldSlotChildren_0, itm_fieldSlotChildren_harvest")
-        - else ?
-          (image "SPR, spr_fieldSlot_0, spr_fieldSlot_prepare")
-          (image "TIL, itm_fieldSlotChildren_0, itm_fieldSlotChildren_prepare")
-      }
-  }{
-    - var_fieldLevel_1 > 0 ?
-      {var_fieldGrowState_1 = var_fieldGrowState_1 + 1}
-      {
-        - var_fieldGrowState_1 >= const_harvestGrowState ?
-          (image "SPR, spr_fieldSlot_1, spr_fieldSlot_harvest")
-          (image "ITM, itm_fieldSlotChildren_1, itm_fieldSlotChildren_harvest")
-        - else ?
-          (image "SPR, spr_fieldSlot_1, spr_fieldSlot_prepare")
-          (image "TIL, itm_fieldSlotChildren_1, itm_fieldSlotChildren_prepare")
-      }
-  }{var_wildSlotState_0 = 0}{var_wildSlotState_1 = 0}{var_wildSlotState_2 = 0}{var_wildSlotState_3 = 0}{var_wildSlotState_4 = 0}{var_wildSlotState_5 = 0}{var_wildSlotState_6 = 0}{var_wildSlotState_7 = 0}{var_wildSlotState_8 = 0}{var_wildSlotState_9 = 0}{shuffle
-    - {var_wildSlotState_2 = 1}{var_wildSlotState_4 = 1}{var_wildSlotState_5 = 1}{var_wildSlotState_6 = 1}{var_wildSlotState_7 = 1}{var_wildSlotState_8 = 1}
-    - {var_wildSlotState_4 = 1}{var_wildSlotState_5 = 1}
-    - {var_wildSlotState_0 = 1}{var_wildSlotState_4 = 1}{var_wildSlotState_5 = 1}{var_wildSlotState_7 = 1}{var_wildSlotState_9 = 1}
-    - {var_wildSlotState_2 = 1}{var_wildSlotState_4 = 1}{var_wildSlotState_8 = 1}{var_wildSlotState_9 = 1}
-    - {var_wildSlotState_1 = 1}{var_wildSlotState_3 = 1}{var_wildSlotState_6 = 1}
-    - {var_wildSlotState_0 = 1}{var_wildSlotState_3 = 1}{var_wildSlotState_4 = 1}{var_wildSlotState_7 = 1}
-    - 
-    - {var_wildSlotState_0 = 1}{var_wildSlotState_2 = 1}{var_wildSlotState_8 = 1}
-    - {var_wildSlotState_0 = 1}{var_wildSlotState_6 = 1}{var_wildSlotState_7 = 1}{var_wildSlotState_9 = 1}
-    - {var_wildSlotState_5 = 1}{var_wildSlotState_7 = 1}
-    - {var_wildSlotState_0 = 1}{var_wildSlotState_3 = 1}{var_wildSlotState_4 = 1}{var_wildSlotState_9 = 1}
-  }{
-    - var_wildSlotState_0 > 0 ?
-      (image "SPR, spr_wildSlot_0, spr_wildSlot_harvest")
-    - else ?
-      (image "SPR, spr_wildSlot_0, spr_wildSlot_empty")
-  }{
-    - var_wildSlotState_1 > 0 ?
-      (image "SPR, spr_wildSlot_1, spr_wildSlot_harvest")
-    - else ?
-      (image "SPR, spr_wildSlot_1, spr_wildSlot_empty")
-  }{
-    - var_wildSlotState_2 > 0 ?
-      (image "SPR, spr_wildSlot_2, spr_wildSlot_harvest")
-    - else ?
-      (image "SPR, spr_wildSlot_2, spr_wildSlot_empty")
-  }{
-    - var_wildSlotState_3 > 0 ?
-      (image "SPR, spr_wildSlot_3, spr_wildSlot_harvest")
-    - else ?
-      (image "SPR, spr_wildSlot_3, spr_wildSlot_empty")
-  }{
-    - var_wildSlotState_4 > 0 ?
-      (image "SPR, spr_wildSlot_4, spr_wildSlot_harvest")
-    - else ?
-      (image "SPR, spr_wildSlot_4, spr_wildSlot_empty")
-  }{
-    - var_wildSlotState_5 > 0 ?
-      (image "SPR, spr_wildSlot_5, spr_wildSlot_harvest")
-    - else ?
-      (image "SPR, spr_wildSlot_5, spr_wildSlot_empty")
-  }{
-    - var_wildSlotState_6 > 0 ?
-      (image "SPR, spr_wildSlot_6, spr_wildSlot_harvest")
-    - else ?
-      (image "SPR, spr_wildSlot_6, spr_wildSlot_empty")
-  }{
-    - var_wildSlotState_7 > 0 ?
-      (image "SPR, spr_wildSlot_7, spr_wildSlot_harvest")
-    - else ?
-      (image "SPR, spr_wildSlot_7, spr_wildSlot_empty")
-  }{
-    - var_wildSlotState_8 > 0 ?
-      (image "SPR, spr_wildSlot_8, spr_wildSlot_harvest")
-    - else ?
-      (image "SPR, spr_wildSlot_8, spr_wildSlot_empty")
-  }{
-    - var_wildSlotState_9 > 0 ?
-      (image "SPR, spr_wildSlot_9, spr_wildSlot_harvest")
-    - else ?
-      (image "SPR, spr_wildSlot_9, spr_wildSlot_empty")
-  }
+    {var_calendarDate = var_calendarDate + 1}
+    {
+      - var_calendarDate == const_goalLimitDate ?
+        {
+          - {item "itm_money"} >= const_goalMoney ?
+            You reach the goal!{pg}
+            (exitNow "rm_reachGoal")
+          - else ? 
+            You don't reach the goal!{pg}
+            (exitNow "rm_notReachGoal")
+        }
+      - else ?
+        {print var_calendarDate}th day come...
+    }{
+      - var_mashroomSellCacheCount > 0 ?
+        {var_temp = var_mashroomSellCacheCount * const_mashroomSellPrice}
+        You sell {print var_mashroomSellCacheCount} {printItem "itm_mushroom"} and gain {print var_temp} {printItem "itm_money"}.
+        {item "itm_money" {{item "itm_money"} + var_temp}}
+        {var_mashroomSellCacheCount = 0}
+    }{
+      - var_fieldLevel_0 > 0 ?
+        {var_fieldGrowState_0 = var_fieldGrowState_0 + 1}
+        {
+          - var_fieldGrowState_0 >= const_harvestGrowState ?
+            (image "SPR, spr_fieldSlot_0, spr_fieldSlot_harvest")
+            (image "ITM, itm_fieldSlotChildren_0, itm_fieldSlotChildren_harvest")
+          - else ?
+            (image "SPR, spr_fieldSlot_0, spr_fieldSlot_prepare")
+            (image "ITM, itm_fieldSlotChildren_0, itm_fieldSlotChildren_prepare")
+        }
+    }{
+      - var_fieldLevel_1 > 0 ?
+        {var_fieldGrowState_1 = var_fieldGrowState_1 + 1}
+        {
+          - var_fieldGrowState_1 >= const_harvestGrowState ?
+            (image "SPR, spr_fieldSlot_1, spr_fieldSlot_harvest")
+            (image "ITM, itm_fieldSlotChildren_1, itm_fieldSlotChildren_harvest")
+          - else ?
+            (image "SPR, spr_fieldSlot_1, spr_fieldSlot_prepare")
+            (image "ITM, itm_fieldSlotChildren_1, itm_fieldSlotChildren_prepare")
+        }
+    }{var_wildSlotState_0 = 0}{var_wildSlotState_1 = 0}{var_wildSlotState_2 = 0}{var_wildSlotState_3 = 0}{var_wildSlotState_4 = 0}{var_wildSlotState_5 = 0}{var_wildSlotState_6 = 0}{var_wildSlotState_7 = 0}{var_wildSlotState_8 = 0}{var_wildSlotState_9 = 0}{shuffle
+      - {var_wildSlotState_2 = 1}{var_wildSlotState_4 = 1}{var_wildSlotState_5 = 1}{var_wildSlotState_6 = 1}{var_wildSlotState_7 = 1}{var_wildSlotState_8 = 1}
+      - {var_wildSlotState_4 = 1}{var_wildSlotState_5 = 1}
+      - {var_wildSlotState_0 = 1}{var_wildSlotState_4 = 1}{var_wildSlotState_5 = 1}{var_wildSlotState_7 = 1}{var_wildSlotState_9 = 1}
+      - {var_wildSlotState_2 = 1}{var_wildSlotState_4 = 1}{var_wildSlotState_8 = 1}{var_wildSlotState_9 = 1}
+      - {var_wildSlotState_1 = 1}{var_wildSlotState_3 = 1}{var_wildSlotState_6 = 1}
+      - {var_wildSlotState_0 = 1}{var_wildSlotState_3 = 1}{var_wildSlotState_4 = 1}{var_wildSlotState_7 = 1}
+      - 
+      - {var_wildSlotState_0 = 1}{var_wildSlotState_2 = 1}{var_wildSlotState_8 = 1}
+      - {var_wildSlotState_0 = 1}{var_wildSlotState_6 = 1}{var_wildSlotState_7 = 1}{var_wildSlotState_9 = 1}
+      - {var_wildSlotState_5 = 1}{var_wildSlotState_7 = 1}
+      - {var_wildSlotState_0 = 1}{var_wildSlotState_3 = 1}{var_wildSlotState_4 = 1}{var_wildSlotState_9 = 1}
+    }{
+      - var_wildSlotState_0 > 0 ?
+        (image "SPR, spr_wildSlot_0, spr_wildSlot_harvest")
+      - else ?
+        (image "SPR, spr_wildSlot_0, spr_wildSlot_empty")
+    }{
+      - var_wildSlotState_1 > 0 ?
+        (image "SPR, spr_wildSlot_1, spr_wildSlot_harvest")
+      - else ?
+        (image "SPR, spr_wildSlot_1, spr_wildSlot_empty")
+    }{
+      - var_wildSlotState_2 > 0 ?
+        (image "SPR, spr_wildSlot_2, spr_wildSlot_harvest")
+      - else ?
+        (image "SPR, spr_wildSlot_2, spr_wildSlot_empty")
+    }{
+      - var_wildSlotState_3 > 0 ?
+        (image "SPR, spr_wildSlot_3, spr_wildSlot_harvest")
+      - else ?
+        (image "SPR, spr_wildSlot_3, spr_wildSlot_empty")
+    }{
+      - var_wildSlotState_4 > 0 ?
+        (image "SPR, spr_wildSlot_4, spr_wildSlot_harvest")
+      - else ?
+        (image "SPR, spr_wildSlot_4, spr_wildSlot_empty")
+    }{
+      - var_wildSlotState_5 > 0 ?
+        (image "SPR, spr_wildSlot_5, spr_wildSlot_harvest")
+      - else ?
+        (image "SPR, spr_wildSlot_5, spr_wildSlot_empty")
+    }{
+      - var_wildSlotState_6 > 0 ?
+        (image "SPR, spr_wildSlot_6, spr_wildSlot_harvest")
+      - else ?
+        (image "SPR, spr_wildSlot_6, spr_wildSlot_empty")
+    }{
+      - var_wildSlotState_7 > 0 ?
+        (image "SPR, spr_wildSlot_7, spr_wildSlot_harvest")
+      - else ?
+        (image "SPR, spr_wildSlot_7, spr_wildSlot_empty")
+    }{
+      - var_wildSlotState_8 > 0 ?
+        (image "SPR, spr_wildSlot_8, spr_wildSlot_harvest")
+      - else ?
+        (image "SPR, spr_wildSlot_8, spr_wildSlot_empty")
+    }{
+      - var_wildSlotState_9 > 0 ?
+        (image "SPR, spr_wildSlot_9, spr_wildSlot_harvest")
+      - else ?
+        (image "SPR, spr_wildSlot_9, spr_wildSlot_empty")
+    }
 }
 """
 NAME newDay
@@ -1123,13 +1160,14 @@ DLG dlg_fieldLogic_0
         {var_temp_choiceResult = 1}
       - No
         {var_temp_choiceResult = 0}
-    }{
+    }...{
       - var_temp_choiceResult == 1 ?
         {
           - {item "itm_money"} >= const_fieldUnlockPrice ?
-            {var_fieldLevel_0 = var_fieldLevel_0 + 1}
-            You have unlocked the field.
-            {item "itm_money" {{item "itm_money"} - const_fieldUnlockPrice}}
+            You unlock this field.
+            {var_fieldLevel_0 = 1}
+            (image "SPR, spr_fieldSlot_0, spr_fieldSlot_empty")
+            (image "ITM, itm_fieldSlotChildren_0, itm_fieldSlotChildren_empty")
           - else ?
             You only have {print {item "itm_money"}} {printItem "itm_money"}.
         }
@@ -1159,24 +1197,26 @@ DLG dlg_fieldLogic_1
         {var_temp_choiceResult = 1}
       - No
         {var_temp_choiceResult = 0}
-    }{
+    }...{
       - var_temp_choiceResult == 1 ?
         {
           - {item "itm_money"} >= const_fieldUnlockPrice ?
-            {var_temp = const_fieldOutputAmount * var_fieldLevel_1}
-            You gather {print var_temp} {printItem "itm_money"} from the field.
-            {item "itm_mushroom" {{item "itm_mushroom"} + var_temp}}
+            You unlock this field.
+            {var_fieldLevel_1 = 1}
+            (image "SPR, spr_fieldSlot_1, spr_fieldSlot_empty")
+            (image "ITM, itm_fieldSlotChildren_1, itm_fieldSlotChildren_empty")
           - else ?
             You only have {print {item "itm_money"}} {printItem "itm_money"}.
         }
     }
   - else ?
     {
-      - var_fieldGrowState_1 == 1 ?
-        Have output! wait next day
-        {item "itm_mushroom" {{item "itm_mushroom"} + const_fieldOutputAmount * var_fieldLevel_1}}
+      - var_fieldGrowState_1 >= const_harvestGrowState ?
+        {var_temp = const_fieldOutputAmount * var_fieldLevel_1}
+        You gather {print var_temp} {printItem "itm_money"} from the field.
+        {item "itm_mushroom" {{item "itm_mushroom"} + var_temp}}
         {var_fieldGrowState_1 = 0}
-        (image "SPR, spr_fieldSlot_1, spr_fieldSlot_prepare")
+        (image "SPR, spr_fieldSlot_1, spr_fieldSlot_empty")
         (image "ITM, itm_fieldSlotChildren_1, itm_fieldSlotChildren_empty")
       - else ?
         This field is still growing.
@@ -1194,7 +1234,7 @@ Put {printItem "itm_mushroom"} to sellCache? {choice
     {var_temp_choiceResult = 2}
   - No
     {var_temp_choiceResult = 0}
-}{
+}...{
   - var_temp_choiceResult == 1 ?
     {
       - {item "itm_mushroom"} > 0 ?
@@ -1438,5 +1478,8 @@ VAR var_wildSlotState_8
 1
 
 VAR var_wildSlotState_9
+1
+
+VAR var_skipNewDayChoice
 1
 
