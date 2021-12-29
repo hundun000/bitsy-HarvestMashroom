@@ -28,12 +28,18 @@ NAME forest
 126,101,37
 255,255,255
 
+PAL pan
+NAME town
+245,197,72
+166,133,49
+255,255,255
+
 ROOM rm_farm
 fc,h16,h17,h18,fh,gr,gr,fh,fh,fh,fh,fh,fh,fh,fh,fc
 fl,h13,h14,h15,gr,gr,gr,gr,gr,gr,gr,gr,gr,gr,gr,fr
 fl,h10,h11,h12,gr,gr,gr,fd,fd,fd,fd,fd,fd,fd,fd,fr
 fl,h00,h01,h02,gr,gr,gr,fd,fd,ec,eh,eh,eh,ec,fd,fr
-fl,gr,gr,gr,gr,gr,gr,fd,fd,ev,f0,f0,f0,ev,fd,fr
+fl,eus,gr,gr,gr,gr,gr,fd,fd,ev,f0,f0,f0,ev,fd,fr
 fl,gr,gr,gr,gr,gr,gr,fd,fd,fd,f0,f0,f0,ev,fd,fr
 fl,gr,gr,gr,gr,gr,gr,fd,fd,ev,f0,f0,f0,ev,fd,fr
 fl,gr,gr,gr,gr,gr,gr,fd,fd,ec,eh,eh,eh,ec,fd,fr
@@ -111,65 +117,100 @@ EXT 7,1 rm_farm 6,14
 PAL pam
 
 ROOM rm_start
+0,0,0,0,h1l,h1l,h1l,h1l,h1l,h1l,h1l,h1l,0,0,0,0
+0,h1r,0,h1m,0,0,0,0,0,0,0,0,h1q,0,0,h1r
+0,0,0,h1m,0,0,0,0,0,0,0,0,h1q,h1r,0,0
+h1r,0,0,h1m,0,0,0,0,0,0,0,0,h1q,0,0,0
+0,0,0,h1m,0,0,0,0,0,0,0,0,h1q,0,h1r,0
+0,0,h1r,h1m,0,0,0,0,0,0,0,0,h1q,0,0,0
+0,0,0,h1m,h1k,h1k,h1k,h1k,h1k,h1k,h1k,h1k,h1q,0,0,0
+fh,fh,fh,h1n,fh,fh,fh,fh,fh,fh,fh,fh,h1p,fh,fh,fh
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-0,0,0,0,a,a,a,a,a,a,0,0,0,0,0,0
-0,0,0,0,a,0,0,0,0,a,0,0,0,0,0,0
-0,0,0,0,a,a,a,0,a,a,0,0,0,0,0,0
-0,0,0,0,0,0,a,a,a,0,0,0,0,0,0,0
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+fh,fh,fh,fh,fh,fh,fc,h1i,h1j,fc,fh,fh,fh,fh,fh,fh
+0,0,0,0,0,0,fr,0,0,fl,0,0,0,0,0,0
+0,0,0,0,0,0,fr,0,0,fl,0,0,0,0,0,0
+0,0,0,0,0,0,fr,0,0,fl,0,0,0,0,0,0
+0,0,0,0,0,0,fr,0,0,fl,0,0,0,0,0,0
 NAME start
-EXT 8,7 rm_farm 6,0 DLG dlg_newDay
-PAL 0
+ITM itm_char_M 4,1
+ITM itm_char_U 5,1
+ITM itm_char_S 6,1
+ITM itm_char_H 7,1
+ITM itm_char_R 8,1
+ITM itm_O 9,1
+ITM itm_O 10,1
+ITM itm_char_M 11,1
+ITM itm_char_H 4,3
+ITM itm_char_A 5,3
+ITM itm_char_R 6,3
+ITM itm_char_V 7,3
+ITM itm_char_E 8,3
+ITM itm_char_S 9,3
+ITM itm_char_T 10,3
+ITM itm_char_F 4,5
+ITM itm_char_E 5,5
+ITM itm_char_S 6,5
+ITM itm_char_T 7,5
+ITM itm_char_I 8,5
+ITM itm_char_V 9,5
+ITM itm_char_A 10,5
+ITM itm_char_L 11,5
+PAL pan
 
 ROOM rm_reachGoal
+0,0,0,0,h1l,h1l,h1l,h1l,h1l,h1l,h1l,h1l,0,0,0,0
+0,h1r,0,h1m,0,0,0,0,0,0,0,0,h1q,0,0,h1r
+0,0,0,h1m,0,0,0,0,0,0,0,0,h1q,h1r,0,0
+h1r,0,0,h1m,0,0,0,0,0,0,0,0,h1q,0,0,0
+0,0,0,h1m,0,0,0,0,0,0,0,0,h1q,0,h1r,0
+0,0,h1r,h1m,0,0,0,0,0,0,0,0,h1q,0,0,0
+0,0,0,h1m,h1k,h1k,h1k,h1k,h1k,h1k,h1k,h1k,h1q,0,0,0
+fh,fh,fh,h1n,fh,fh,fh,fh,fh,fh,fh,fh,h1p,fh,fh,fh
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-0,0,0,0,a,a,a,a,a,a,0,0,0,0,0,0
-0,0,0,0,a,0,0,0,0,a,0,0,0,0,0,0
-0,0,0,0,a,a,a,0,a,a,0,0,0,0,0,0
-0,0,0,0,0,0,a,a,a,0,0,0,0,0,0,0
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-0,a,0,0,0,a,0,a,0,a,0,0,a,0,0,0
-0,a,0,a,0,a,0,a,0,a,a,0,a,0,0,0
-0,a,a,0,a,a,0,a,0,a,0,a,a,0,0,0
-0,a,0,0,0,a,0,a,0,a,0,0,a,0,0,0
+fh,fh,fh,fh,fh,fh,fc,h1i,h1j,fc,fh,fh,fh,fh,fh,fh
+0,0,0,0,0,0,fr,0,0,fl,0,0,0,0,0,0
+0,0,0,0,0,0,fr,0,0,fl,0,0,0,0,0,0
+0,0,0,0,0,0,fr,0,0,fl,0,0,0,0,0,0
+0,0,0,0,0,0,fr,0,0,fl,0,0,0,0,0,0
 NAME reachGoal
-PAL 0
+ITM itm_char_Y 5,2
+ITM itm_O 6,2
+ITM itm_char_U 7,2
+ITM itm_char_W 8,4
+ITM itm_char_I 9,4
+ITM itm_char_N 10,4
+PAL pan
 
 ROOM rm_notReachGoal
+0,0,0,0,h1l,h1l,h1l,h1l,h1l,h1l,h1l,h1l,0,0,0,0
+0,h1r,0,h1m,0,0,0,0,0,0,0,0,h1q,0,0,h1r
+0,0,0,h1m,0,0,0,0,0,0,0,0,h1q,h1r,0,0
+h1r,0,0,h1m,0,0,0,0,0,0,0,0,h1q,0,0,0
+0,0,0,h1m,0,0,0,0,0,0,0,0,h1q,0,h1r,0
+0,0,h1r,h1m,0,0,0,0,0,0,0,0,h1q,0,0,0
+0,0,0,h1m,h1k,h1k,h1k,h1k,h1k,h1k,h1k,h1k,h1q,0,0,0
+fh,fh,fh,h1n,fh,fh,fh,fh,fh,fh,fh,fh,h1p,fh,fh,fh
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-0,0,0,0,a,a,a,a,a,a,0,0,0,0,0,0
-0,0,0,0,a,0,0,0,0,a,0,0,0,0,0,0
-0,0,0,0,a,a,a,0,a,a,0,0,0,0,0,0
-0,0,0,0,0,0,a,a,a,0,0,0,0,0,0,0
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-0,0,a,0,0,a,0,a,a,a,0,a,a,a,0,0
-0,0,a,a,0,a,0,a,0,a,0,0,a,0,0,0
-0,0,a,0,a,a,0,a,0,a,0,0,a,0,0,0
-0,0,a,0,0,a,0,a,a,a,0,0,a,0,0,0
+fh,fh,fh,fh,fh,fh,fc,h1i,h1j,fc,fh,fh,fh,fh,fh,fh
+0,0,0,0,0,0,fr,0,0,fl,0,0,0,0,0,0
+0,0,0,0,0,0,fr,0,0,fl,0,0,0,0,0,0
+0,0,0,0,0,0,fr,0,0,fl,0,0,0,0,0,0
+0,0,0,0,0,0,fr,0,0,fl,0,0,0,0,0,0
 NAME notReachGoal
-PAL 0
+ITM itm_char_Y 5,2
+ITM itm_O 6,2
+ITM itm_char_U 7,2
+ITM itm_char_F 7,4
+ITM itm_char_A 8,4
+ITM itm_char_L 10,4
+ITM itm_char_I 9,4
+PAL pan
 
 TIL a
 11111111
@@ -513,16 +554,6 @@ TIL h18
 NAME house32
 WAL true
 
-TIL h19
-00000000
-00000000
-00000000
-00000000
-00000000
-00000000
-00000000
-00000000
-
 TIL h1a
 11111111
 11111111
@@ -617,17 +648,6 @@ TIL h1h
 10000010
 NAME exitUpRight
 
-TIL h1i
-00010101
-00100000
-00000001
-00100010
-00000100
-00100000
-00000000
-00100000
-NAME exitUpLeft
-
 TIL edl
 00000011
 00000010
@@ -672,6 +692,140 @@ TIL eur
 11000000
 NAME exitUp_right
 
+TIL h1i
+00000000
+00000000
+00000000
+11111100
+11111100
+11111100
+11111100
+11000000
+NAME gateLeft
+WAL true
+
+TIL h1j
+00000000
+00000000
+00000000
+00111111
+00111111
+00111111
+00111111
+00000011
+NAME gateRight
+WAL true
+
+TIL eus
+00011000
+00100100
+01000010
+10000001
+11100111
+00100100
+00100100
+00111100
+NAME exitUpSingle
+
+TIL h1k
+11111111
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+NAME bannerDown
+
+TIL h1l
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+11111111
+NAME bannerUp
+
+TIL h1m
+00000111
+00000111
+00000111
+00000111
+00000111
+00000111
+00000111
+00000111
+NAME poleLeft1
+
+TIL h1n
+00000111
+01100111
+11111111
+11111111
+01100111
+01100111
+01100111
+01100111
+NAME fenchPoleLeft
+WAL true
+
+TIL h1o
+00000000
+01100110
+11111111
+11111111
+01100110
+01100110
+01100110
+01100110
+WAL true
+
+TIL h1p
+11100000
+11100110
+11111111
+11111111
+11100110
+11100110
+11100110
+11100110
+NAME fenchPoleRight
+WAL true
+
+TIL h1q
+11100000
+11100000
+11100000
+11100000
+11100000
+11100000
+11100000
+11100000
+NAME poleRight1
+
+TIL h1r
+00111000
+01000100
+01000100
+01000100
+00101000
+00010000
+00010000
+00100000
+>
+00111000
+01000100
+01000100
+01000100
+00101000
+00010000
+00010000
+00001000
+NAME balloon0
+
 SPR A
 00011000
 00011000
@@ -681,7 +835,7 @@ SPR A
 10111101
 00100100
 00100100
-POS rm_start 5,7
+POS rm_start 1,9
 ITM itm_money 10
 ITM itm_mushroom 5
 
@@ -840,19 +994,6 @@ SPR spr_fieldSlot_harvest
 00011000
 NAME fieldSlot_harvest
 
-SPR spr_cacheButton
-00000000
-00111100
-01100110
-10100101
-10100101
-10100101
-10100101
-10100101
-NAME cache1
-DLG dlg_cacheLogic
-POS rm_farm 4,6
-
 SPR spr_wildSlot_0
 00000000
 00000000
@@ -1005,20 +1146,7 @@ SPR spr_wildSlot_harvest
 00011000
 NAME wildSlot_harvest
 
-SPR spr_storage
-10000010
-10000001
-10000000
-10000000
-10000000
-11111111
-00000000
-00000000
-NAME storage2
-DLG dlg_storageLogic
-POS rm_home 4,7
-
-SPR spw
+SPR spr_tableRight
 00000010
 11111111
 10000001
@@ -1028,7 +1156,7 @@ SPR spw
 11111111
 00000010
 NAME tableRight
-DLG dlh
+DLG dlg_table
 POS rm_home 9,7
 
 SPR spx
@@ -1056,7 +1184,7 @@ SPR spy
 NAME tvLeft
 POS rm_home 8,6
 
-SPR spz
+SPR spr_tableLeft
 01000000
 11111111
 10000001
@@ -1066,33 +1194,10 @@ SPR spz
 11111111
 01000000
 NAME tableLeft
+DLG dlg_table
 POS rm_home 8,7
 
-SPR sq0
-01000001
-10000001
-00000001
-00000001
-00000001
-11111111
-00000000
-00000000
-NAME storage3
-POS rm_home 5,7
-
-SPR sq1
-11111111
-00000001
-00000001
-00000001
-11111111
-00000001
-00000001
-11111111
-NAME storage1
-POS rm_home 5,6
-
-SPR sq2
+SPR spr_storage0
 11111111
 10000000
 10000000
@@ -1102,9 +1207,49 @@ SPR sq2
 10000000
 11111111
 NAME storage0
+DLG dlg_storageLogic
 POS rm_home 4,6
 
-SPR sq3
+SPR spr_storage1
+11111111
+00000001
+00000001
+00000001
+11111111
+00000001
+00000001
+11111111
+NAME storage1
+DLG dlg_storageLogic
+POS rm_home 5,6
+
+SPR spr_storage2
+10000010
+10000001
+10000000
+10000000
+10000000
+11111111
+00000000
+00000000
+NAME storage2
+DLG dlg_storageLogic
+POS rm_home 4,7
+
+SPR spr_storage3
+01000001
+10000001
+00000001
+00000001
+00000001
+11111111
+00000000
+00000000
+NAME storage3
+DLG dlg_storageLogic
+POS rm_home 5,7
+
+SPR spr_cache0
 10111101
 11000011
 10000001
@@ -1114,9 +1259,23 @@ SPR sq3
 01111110
 00000000
 NAME cache0
+DLG dlg_cacheLogic
 POS rm_farm 4,7
 
-SPR sq4
+SPR spr_cache1
+00000000
+00111100
+01100110
+10100101
+10100101
+10100101
+10100101
+10100101
+NAME cache1
+DLG dlg_cacheLogic
+POS rm_farm 4,6
+
+SPR spr_cacheSign
 11111111
 10000001
 10101001
@@ -1126,9 +1285,10 @@ SPR sq4
 00011000
 00011000
 NAME cacheSign
+DLG dlg_cacheSign
 POS rm_farm 3,6
 
-SPR sq5
+SPR spr_fieldSign
 11111111
 10000001
 10101001
@@ -1138,10 +1298,11 @@ SPR sq5
 00011000
 00011000
 NAME fieldSign
+DLG dlg_fieldSign
 POS rm_farm 9,2
 
-ITM itm_mayor_start
-00011000
+SPR itm_mayor_start
+00111100
 00011000
 00011000
 00111100
@@ -1149,8 +1310,60 @@ ITM itm_mayor_start
 10111101
 00100100
 00100100
+>
+00111100
+10011000
+01011000
+00111100
+00111110
+00111101
+00100100
+00100100
 NAME mayor_start
 DLG dlg_mayor_start
+POS rm_start 8,10
+
+SPR spz
+00111100
+00011000
+00011000
+00111100
+01111110
+10111101
+00100100
+00100100
+>
+00111100
+10011000
+01011000
+00111100
+00111110
+00111101
+00100100
+00100100
+NAME mayor_win
+POS rm_reachGoal 8,12
+
+SPR sq0
+00111100
+00011000
+00011000
+00111100
+01111110
+10111101
+00100100
+00100100
+>
+00111100
+10011000
+01011000
+00111100
+00111110
+00111101
+00100100
+00100100
+NAME mayor_fail
+POS rm_notReachGoal 8,12
 
 ITM itm_fieldSlotChildren_0
 00000000
@@ -1246,6 +1459,300 @@ ITM itm_mushroom
 00100100
 00111100
 NAME mushroom
+
+ITM itm_char_A
+001110NaNNaN
+010001NaNNaN
+010001NaNNaN
+010001NaNNaN
+011111NaNNaN
+010001NaNNaN
+010001NaNNaN
+000000NaNNaN
+NAME char_A
+
+ITM itm_char_B
+011110NaNNaN
+010001NaNNaN
+010001NaNNaN
+011110NaNNaN
+010001NaNNaN
+010001NaNNaN
+011110NaNNaN
+000000NaNNaN
+NAME char_B
+
+ITM itm_char_C
+001110NaNNaN
+010001NaNNaN
+010000NaNNaN
+010000NaNNaN
+010000NaNNaN
+010001NaNNaN
+001110NaNNaN
+000000NaNNaN
+NAME char_C
+
+ITM itm_char_D
+011110NaNNaN
+010001NaNNaN
+010001NaNNaN
+010001NaNNaN
+010001NaNNaN
+010001NaNNaN
+011110NaNNaN
+000000NaNNaN
+NAME char_D
+
+ITM itm_char_E
+011111NaNNaN
+010000NaNNaN
+010000NaNNaN
+011110NaNNaN
+010000NaNNaN
+010000NaNNaN
+011111NaNNaN
+000000NaNNaN
+NAME char_E
+
+ITM itm_char_F
+011111NaNNaN
+010000NaNNaN
+010000NaNNaN
+011110NaNNaN
+010000NaNNaN
+010000NaNNaN
+010000NaNNaN
+000000NaNNaN
+NAME char_F
+
+ITM itm_char_G
+001110NaNNaN
+010001NaNNaN
+010000NaNNaN
+010111NaNNaN
+010001NaNNaN
+010001NaNNaN
+001111NaNNaN
+000000NaNNaN
+NAME char_G
+
+ITM itm_char_H
+010001NaNNaN
+010001NaNNaN
+010001NaNNaN
+011111NaNNaN
+010001NaNNaN
+010001NaNNaN
+010001NaNNaN
+000000NaNNaN
+NAME char_H
+
+ITM itm_char_I
+001110NaNNaN
+000100NaNNaN
+000100NaNNaN
+000100NaNNaN
+000100NaNNaN
+000100NaNNaN
+001110NaNNaN
+000000NaNNaN
+NAME char_I
+
+ITM itm_char_J
+000001NaNNaN
+000001NaNNaN
+000001NaNNaN
+000001NaNNaN
+010001NaNNaN
+010001NaNNaN
+001110NaNNaN
+000000NaNNaN
+NAME char_J
+
+ITM itm_char_K
+010001NaNNaN
+010010NaNNaN
+010100NaNNaN
+011000NaNNaN
+010100NaNNaN
+010010NaNNaN
+010001NaNNaN
+000000NaNNaN
+NAME char_K
+
+ITM itm_char_L
+010000NaNNaN
+010000NaNNaN
+010000NaNNaN
+010000NaNNaN
+010000NaNNaN
+010000NaNNaN
+011111NaNNaN
+000000NaNNaN
+NAME char_L
+
+ITM itm_char_M
+010001NaNNaN
+011011NaNNaN
+010101NaNNaN
+010001NaNNaN
+010001NaNNaN
+010001NaNNaN
+010001NaNNaN
+000000NaNNaN
+NAME char_M
+
+ITM itm_char_N
+010001NaNNaN
+011001NaNNaN
+010101NaNNaN
+010011NaNNaN
+010001NaNNaN
+010001NaNNaN
+010001NaNNaN
+000000NaNNaN
+NAME char_N
+
+ITM itm_O
+001110NaNNaN
+010001NaNNaN
+010001NaNNaN
+010001NaNNaN
+010001NaNNaN
+010001NaNNaN
+001110NaNNaN
+000000NaNNaN
+NAME char_O
+
+ITM itm_char_P
+011110NaNNaN
+010001NaNNaN
+010001NaNNaN
+011110NaNNaN
+010000NaNNaN
+010000NaNNaN
+010000NaNNaN
+000000NaNNaN
+NAME char_P
+
+ITM itm_char_Q
+001110NaNNaN
+010001NaNNaN
+010001NaNNaN
+010001NaNNaN
+010101NaNNaN
+010010NaNNaN
+001101NaNNaN
+000000NaNNaN
+NAME char_Q
+
+ITM itm_char_R
+011110NaNNaN
+010001NaNNaN
+010001NaNNaN
+011110NaNNaN
+010010NaNNaN
+010001NaNNaN
+010001NaNNaN
+000000NaNNaN
+NAME char_R
+
+ITM itm_char_S
+001110NaNNaN
+010001NaNNaN
+010000NaNNaN
+001110NaNNaN
+000001NaNNaN
+010001NaNNaN
+001110NaNNaN
+000000NaNNaN
+NAME char_S
+
+ITM itm_char_T
+011111NaNNaN
+000100NaNNaN
+000100NaNNaN
+000100NaNNaN
+000100NaNNaN
+000100NaNNaN
+000100NaNNaN
+000000NaNNaN
+NAME char_T
+
+ITM itm_char_U
+010001NaNNaN
+010001NaNNaN
+010001NaNNaN
+010001NaNNaN
+010001NaNNaN
+010001NaNNaN
+001110NaNNaN
+000000NaNNaN
+NAME char_U
+
+ITM itm_char_V
+010001NaNNaN
+010001NaNNaN
+010001NaNNaN
+010001NaNNaN
+010001NaNNaN
+001010NaNNaN
+000100NaNNaN
+000000NaNNaN
+NAME char_V
+
+ITM itm_char_W
+010001NaNNaN
+010001NaNNaN
+010101NaNNaN
+010101NaNNaN
+010101NaNNaN
+010101NaNNaN
+001010NaNNaN
+000000NaNNaN
+NAME char_W
+
+ITM itm_char_X
+010001NaNNaN
+010001NaNNaN
+001010NaNNaN
+000100NaNNaN
+001010NaNNaN
+010001NaNNaN
+010001NaNNaN
+000000NaNNaN
+NAME char_X
+
+ITM itm_char_Y
+010001NaNNaN
+010001NaNNaN
+010001NaNNaN
+001010NaNNaN
+000100NaNNaN
+000100NaNNaN
+000100NaNNaN
+000000NaNNaN
+NAME char_Y
+
+ITM itm_char_Z
+011110NaNNaN
+000010NaNNaN
+000100NaNNaN
+001000NaNNaN
+010000NaNNaN
+010000NaNNaN
+011110NaNNaN
+000000NaNNaN
+NAME char_Z
+
+DLG dlg_cacheSign
+text of dlg_cacheSign
+NAME cacheSign
+
+DLG dlg_fieldSign
+text of dlg_fieldSign
+NAME fieldSign
 
 DLG dlg_newDay_choiceCase1
 """
@@ -1378,7 +1885,7 @@ NAME newDay
 
 DLG dlg_mayor_start
 """
-Welcome to the 10-day mashroom harvest festival. The goal is that you hold at least {print const_goalMoney} {printItem "itm_money"} at the 10-day end.
+Welcome to the 10-day mashroom harvest festival. The goal is that you hold at least {print const_goalMoney} {printItem "itm_money"} at the 10-day end.(exit "rm_farm")(jump "dlg_newDay")
 """
 NAME mayor_start
 
@@ -1671,7 +2178,7 @@ DLG dlg_wildSlotLogic_9
 """
 NAME wildSlotLogic9
 
-DLG dig_table
+DLG dlg_table
 A tv.
 NAME table
 
