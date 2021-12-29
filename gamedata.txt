@@ -16,10 +16,16 @@ NAME farm
 162,130,47
 255,255,255
 
-PAL pam
+PAL pal_home
 NAME home
 0,82,204
 162,130,47
+255,255,255
+
+PAL pam
+NAME forest
+88,159,75
+126,101,37
 255,255,255
 
 ROOM rm_farm
@@ -38,7 +44,7 @@ fl,gr,gr,gr,gr,gr,gr,fd,fd,fd,f1,f1,f1,ev,fd,fr
 fl,gr,gr,gr,gr,gr,gr,fd,fd,ev,f1,f1,f1,ev,fd,fr
 fl,gr,gr,gr,gr,gr,gr,fd,fd,ec,eh,eh,eh,ec,fd,fr
 fl,gr,gr,gr,gr,gr,gr,fd,fd,fd,fd,fd,fd,fd,fd,fr
-fc,fh,fh,fh,fh,ex,ex,fh,fh,fh,fh,fh,fh,fh,fh,fc
+fc,fh,fh,fh,fh,edl,edr,fh,fh,fh,fh,fh,fh,fh,fh,fc
 NAME home
 ITM itm_fieldSlotChildren_0 10,4
 ITM itm_fieldSlotChildren_0 11,4
@@ -56,8 +62,8 @@ ITM itm_fieldSlotChildren_1 12,12
 ITM itm_fieldSlotChildren_1 11,12
 ITM itm_fieldSlotChildren_1 10,12
 ITM itm_fieldSlotChildren_1 11,11
-EXT 5,15 rm_forest 4,2
-EXT 6,15 rm_forest 5,2
+EXT 5,15 rm_forest 6,2
+EXT 6,15 rm_forest 7,2
 EXT 1,3 rm_home 9,11
 PAL pal_farm
 
@@ -80,29 +86,29 @@ ROOM rm_home
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 NAME home
 EXT 9,12 rm_farm 1,4
-PAL pam
+PAL pal_home
 
 ROOM rm_forest
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-0,a,a,a,a,ex,ex,a,a,a,a,a,a,a,a,0
-0,a,0,0,0,0,0,0,0,0,0,0,0,0,a,0
-0,a,0,0,0,0,0,0,0,0,0,0,0,0,a,0
-0,a,0,0,0,0,0,0,0,0,0,0,0,0,a,0
-0,a,0,0,0,0,0,0,0,0,0,0,0,0,a,0
-0,a,0,0,0,0,0,0,0,0,0,0,0,0,a,0
-0,a,0,0,0,0,0,0,0,0,0,0,0,0,a,0
-0,a,0,0,0,0,0,0,0,0,0,0,0,0,a,0
-0,a,0,0,0,0,0,0,0,0,0,0,0,0,a,0
-0,a,0,0,0,0,0,0,0,0,0,0,0,0,a,0
-0,a,0,0,0,0,0,0,0,0,0,0,0,0,a,0
-0,a,0,0,0,0,0,0,0,0,0,0,0,0,a,0
-0,a,0,0,0,0,0,0,0,0,0,0,0,0,a,0
-0,a,a,a,a,a,a,a,a,a,a,a,a,a,a,0
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+gr,h1b,h1c,gr,h1b,h1c,gr,gr,h1b,h1c,h1b,h1c,gr,h1b,h1c,gr
+gr,h1d,h1e,gr,h1d,h1e,eul,eur,h1d,h1e,h1d,h1b,h1c,h1d,h1e,gr
+gr,h1f,h1b,h1c,h1f,h1g,gr,gr,h1f,h1g,h1f,h1d,h1e,h1f,h1b,h1c
+gr,gr,h1d,h1e,gr,gr,gr,gr,gr,gr,gr,h1f,h1g,gr,h1d,h1e
+gr,h1b,h1c,h1g,gr,gr,gr,gr,gr,gr,gr,gr,gr,gr,h1b,h1c
+h1b,h1c,h1e,gr,gr,gr,gr,gr,gr,gr,gr,gr,gr,gr,h1b,h1c
+h1d,h1e,h1g,gr,gr,gr,gr,gr,gr,gr,gr,gr,gr,gr,h1d,h1e
+h1f,h1b,h1c,gr,gr,gr,gr,gr,gr,gr,gr,gr,gr,h1b,h1c,h1b
+h1c,h1d,h1b,h1c,gr,gr,gr,gr,gr,gr,gr,gr,gr,h1d,h1e,h1d
+h1e,h1f,h1d,h1e,gr,gr,gr,gr,gr,gr,gr,gr,gr,h1f,h1g,h1f
+h1g,gr,h1f,h1g,gr,gr,gr,gr,gr,gr,gr,gr,gr,gr,h1b,h1c
+h1b,h1c,gr,gr,gr,gr,gr,gr,gr,gr,gr,gr,gr,gr,h1d,h1e
+h1d,h1e,gr,gr,gr,gr,gr,gr,gr,gr,gr,gr,gr,gr,h1f,h1g
+h1f,h1b,h1c,gr,gr,gr,h1b,h1c,gr,gr,gr,gr,h1b,h1c,h1b,h1c
+gr,h1d,h1e,h1b,h1c,gr,h1d,h1e,gr,h1b,h1c,gr,h1d,h1e,h1d,h1e
+gr,h1f,h1g,h1d,h1e,h1b,h1c,h1g,h1b,h1c,h1e,h1b,h1c,h1g,h1f,h1g
 NAME forest
-EXT 4,1 rm_farm 5,15
-EXT 5,1 rm_farm 6,15
-PAL 0
+EXT 6,1 rm_farm 5,14
+EXT 7,1 rm_farm 6,14
+PAL pam
 
 ROOM rm_start
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
@@ -507,6 +513,165 @@ TIL h18
 NAME house32
 WAL true
 
+TIL h19
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+
+TIL h1a
+11111111
+11111111
+11111111
+11111111
+11111111
+11111111
+11111111
+11111111
+NAME poolBack
+
+TIL h1b
+00011001
+00100110
+00100000
+01001000
+10010000
+01001001
+00100010
+01000000
+NAME leaf0
+WAL true
+
+TIL h1c
+10000000
+01111000
+00000100
+01000100
+01010010
+00100001
+10000010
+00000010
+NAME leaf1
+WAL true
+
+TIL h1d
+01000100
+10011010
+01000000
+00100101
+00011011
+00001011
+00000111
+00000011
+NAME leaf2
+WAL true
+
+TIL h1e
+00000101
+01001001
+00111010
+11010100
+01111000
+11000000
+11000000
+11000000
+NAME leaf3
+WAL true
+
+TIL h1f
+00000011
+00000011
+00000011
+00000011
+00001111
+00010111
+00001001
+00000000
+NAME leaf4
+WAL true
+
+TIL h1g
+11000000
+11000000
+11000000
+11000000
+11100000
+11111000
+10001100
+00000000
+NAME leaf5
+WAL true
+
+TIL h1h
+11111110
+10000010
+11000010
+10100010
+10010010
+10000010
+10000010
+10000010
+NAME exitUpRight
+
+TIL h1i
+00010101
+00100000
+00000001
+00100010
+00000100
+00100000
+00000000
+00100000
+NAME exitUpLeft
+
+TIL edl
+00000011
+00000010
+00000010
+00001110
+00001000
+00000100
+00000010
+00000001
+NAME exitDown_left
+
+TIL edr
+11000000
+01000000
+01000000
+01110000
+00010000
+00100000
+01000000
+10000000
+NAME exitDown_right
+
+TIL eul
+00000001
+00000010
+00000100
+00001000
+00001110
+00000010
+00000010
+00000011
+NAME exitUp_left
+
+TIL eur
+10000000
+01000000
+00100000
+00010000
+01110000
+01000000
+01000000
+11000000
+NAME exitUp_right
+
 SPR A
 00011000
 00011000
@@ -524,11 +689,11 @@ SPR spr_fieldSlot_0
 00000000
 00000000
 00000000
-01010001
-01001010
-00101010
-00101010
-00101010
+00000000
+00000000
+00000000
+00000000
+01111110
 NAME fieldSlot0
 DLG dlg_fieldLogic_0
 POS rm_farm 10,5
@@ -537,11 +702,11 @@ SPR spr_fieldSlot_1
 00000000
 00000000
 00000000
-01010001
-01001010
-00101010
-00101010
-00101010
+00000000
+00000000
+00000000
+00000000
+01111110
 NAME fieldSlot1
 DLG dlg_fieldLogic_1
 POS rm_farm 10,11
@@ -630,45 +795,63 @@ SPR spr_fieldSlot_empty
 00000000
 00000000
 00000000
-00000000
-01111110
-10000001
+00011000
+00111100
+00011000
 NAME fieldSlot_empty
 
 SPR spr_fieldSlot_prepare
 00000000
 00000000
 00000000
-11111111
-00010000
-00010000
-01111110
-10000001
+00011100
+00001000
+01001000
+00101000
+00011000
+>
+00000000
+00000000
+00000000
+00001110
+00000100
+00100100
+00101000
+00011000
 NAME fieldSlot_prepare
 
 SPR spr_fieldSlot_harvest
-11111111
-00010000
-00010000
-00010000
-00010000
-00010000
-01111110
-10000001
+00000000
+00011100
+00111110
+00001000
+11101000
+01001000
+00101000
+00011000
+>
+00000000
+00001110
+00011111
+00000100
+01110100
+00100100
+00101000
+00011000
 NAME fieldSlot_harvest
 
 SPR spr_cacheButton
-01000000
-11100000
-01000000
 00000000
-11101010
-10101010
-11101010
-10101111
-NAME cacheButton
+00111100
+01100110
+10100101
+10100101
+10100101
+10100101
+10100101
+NAME cache1
 DLG dlg_cacheLogic
-POS rm_farm 2,7
+POS rm_farm 4,6
 
 SPR spr_wildSlot_0
 00000000
@@ -681,7 +864,7 @@ SPR spr_wildSlot_0
 11111111
 NAME wildSlot0
 DLG dlg_wildSlotLogic_0
-POS rm_forest 10,6
+POS rm_forest 4,3
 
 SPR spr_wildSlot_1
 00000000
@@ -694,7 +877,7 @@ SPR spr_wildSlot_1
 11111111
 NAME wildSlot1
 DLG dlg_wildSlotLogic_1
-POS rm_forest 4,5
+POS rm_forest 10,3
 
 SPR spr_wildSlot_2
 00000000
@@ -707,7 +890,7 @@ SPR spr_wildSlot_2
 11111111
 NAME wildSlot2
 DLG dlg_wildSlotLogic_2
-POS rm_forest 3,3
+POS rm_forest 13,4
 
 SPR spr_wildSlot_3
 00000000
@@ -720,7 +903,7 @@ SPR spr_wildSlot_3
 11111111
 NAME wildSlot3
 DLG dlg_wildSlotLogic_3
-POS rm_forest 7,10
+POS rm_forest 3,6
 
 SPR spr_wildSlot_4
 00000000
@@ -733,7 +916,7 @@ SPR spr_wildSlot_4
 11111111
 NAME wildSlot4
 DLG dlg_wildSlotLogic_4
-POS rm_forest 14,12
+POS rm_forest 12,9
 
 SPR spr_wildSlot_5
 00000000
@@ -746,7 +929,7 @@ SPR spr_wildSlot_5
 11111111
 NAME wildSlot5
 DLG dlg_wildSlotLogic_5
-POS rm_forest 3,5
+POS rm_forest 4,10
 
 SPR spr_wildSlot_6
 00000000
@@ -759,7 +942,7 @@ SPR spr_wildSlot_6
 11111111
 NAME wildSlot6
 DLG dlg_wildSlotLogic_6
-POS rm_forest 13,3
+POS rm_forest 2,11
 
 SPR spr_wildSlot_7
 00000000
@@ -772,7 +955,7 @@ SPR spr_wildSlot_7
 11111111
 NAME wildSlot7
 DLG dlg_wildSlotLogic_7
-POS rm_forest 14,9
+POS rm_forest 5,14
 
 SPR spr_wildSlot_8
 00000000
@@ -785,7 +968,7 @@ SPR spr_wildSlot_8
 11111111
 NAME wildSlot8
 DLG dlg_wildSlotLogic_8
-POS rm_forest 2,14
+POS rm_forest 8,14
 
 SPR spr_wildSlot_9
 00000000
@@ -798,7 +981,7 @@ SPR spr_wildSlot_9
 11111111
 NAME wildSlot9
 DLG dlg_wildSlotLogic_9
-POS rm_forest 11,13
+POS rm_forest 13,12
 
 SPR spr_wildSlot_empty
 00000000
@@ -807,19 +990,19 @@ SPR spr_wildSlot_empty
 00000000
 00000000
 00000000
-01111110
-11111111
+00011000
+00100100
 NAME wildSlot_empty
 
 SPR spr_wildSlot_harvest
-11111111
-00010000
-00010000
-00010000
-00010000
-00010000
+00000000
+00000000
+00000000
+00111100
+00111100
 01111110
-11111111
+00011000
+00011000
 NAME wildSlot_harvest
 
 SPR spr_storage
@@ -921,6 +1104,42 @@ SPR sq2
 NAME storage0
 POS rm_home 4,6
 
+SPR sq3
+10111101
+11000011
+10000001
+10111101
+10111101
+10000001
+01111110
+00000000
+NAME cache0
+POS rm_farm 4,7
+
+SPR sq4
+11111111
+10000001
+10101001
+10010101
+10000001
+11111111
+00011000
+00011000
+NAME cacheSign
+POS rm_farm 3,6
+
+SPR sq5
+11111111
+10000001
+10101001
+10010101
+10000001
+11111111
+00011000
+00011000
+NAME fieldSign
+POS rm_farm 9,2
+
 ITM itm_mayor_start
 00011000
 00011000
@@ -937,22 +1156,22 @@ ITM itm_fieldSlotChildren_0
 00000000
 00000000
 00000000
-01010001
-01001010
-00101010
-00101010
-00101010
+00000000
+00000000
+00000000
+00000000
+01111110
 NAME fieldSlotChildren_0
 
 ITM itm_fieldSlotChildren_1
 00000000
 00000000
 00000000
-01010001
-01001010
-00101010
-00101010
-00101010
+00000000
+00000000
+00000000
+00000000
+01111110
 NAME fieldSlotChildren_1
 
 ITM itm_fieldSlotChildren_empty
@@ -961,31 +1180,49 @@ ITM itm_fieldSlotChildren_empty
 00000000
 00000000
 00000000
-00000000
-01111110
-10000001
+00011000
+00111100
+00011000
 NAME fieldSlotChildren_empty
 
 ITM itm_fieldSlotChildren_prepare
 00000000
 00000000
 00000000
-11111111
-00010000
-00010000
-01111110
-10000001
+00011100
+00001000
+01001000
+00101000
+00011000
+>
+00000000
+00000000
+00000000
+00001110
+00000100
+00100100
+00101000
+00011000
 NAME fieldSlotChildren_prepare
 
 ITM itm_fieldSlotChildren_harvest
-11111111
-00010000
-00010000
-00010000
-00010000
-00010000
-01111110
-10000001
+00000000
+00011100
+00111110
+00001000
+11101000
+01001000
+00101000
+00011000
+>
+00000000
+00001110
+00011111
+00000100
+01110100
+00100100
+00101000
+00011000
 NAME fieldSlotChildren_harvest
 
 ITM itm_money
@@ -1010,20 +1247,9 @@ ITM itm_mushroom
 00111100
 NAME mushroom
 
-DLG dlg_newDay
+DLG dlg_newDay_choiceCase1
 """
 {
-  - var_skipNewDayChoice == 1 ?
-    {var_skipNewDayChoice = 0}
-    {var_temp_choiceResult = 1}
-  - else ?
-    Finish today?{choice
-      - Yes
-        {var_temp_choiceResult = 1}
-      - No
-        {var_temp_choiceResult = 0}
-    }
-}...{
   - var_temp_choiceResult == 1 ?
     {var_calendarDate = var_calendarDate + 1}
     {
@@ -1133,6 +1359,23 @@ DLG dlg_newDay
 """
 NAME newDay
 
+DLG dlg_newDay
+"""
+{
+  - var_skipNewDayChoice == 1 ?
+    {var_skipNewDayChoice = 0}
+    {var_temp_choiceResult = 1}
+  - else ?
+    Finish today?{choice
+      - Yes
+        {var_temp_choiceResult = 1}
+      - No
+        {var_temp_choiceResult = 0}
+    }
+}(jump "dlg_newDay_choiceCase1")
+"""
+NAME newDay
+
 DLG dlg_mayor_start
 """
 Welcome to the 10-day mashroom harvest festival. The goal is that you hold at least {print const_goalMoney} {printItem "itm_money"} at the 10-day end.
@@ -1151,6 +1394,23 @@ You only hold {item "itm_money"}} {printItem "itm_money"} and don't reach the go
 """
 NAME mayor_fail
 
+DLG dlg_fieldLogic_0_choiceCase1
+"""
+{
+  - var_temp_choiceResult == 1 ?
+    {
+      - {item "itm_money"} >= const_fieldUnlockPrice ?
+        You unlock this field.
+        {var_fieldLevel_0 = 1}
+        (image "SPR, spr_fieldSlot_0, spr_fieldSlot_empty")
+        (image "ITM, itm_fieldSlotChildren_0, itm_fieldSlotChildren_empty")
+      - else ?
+        You only have {print {item "itm_money"}} {printItem "itm_money"}.
+    }
+}
+"""
+NAME fieldLogic0_choiceCase1
+
 DLG dlg_fieldLogic_0
 """
 {
@@ -1160,18 +1420,7 @@ DLG dlg_fieldLogic_0
         {var_temp_choiceResult = 1}
       - No
         {var_temp_choiceResult = 0}
-    }...{
-      - var_temp_choiceResult == 1 ?
-        {
-          - {item "itm_money"} >= const_fieldUnlockPrice ?
-            You unlock this field.
-            {var_fieldLevel_0 = 1}
-            (image "SPR, spr_fieldSlot_0, spr_fieldSlot_empty")
-            (image "ITM, itm_fieldSlotChildren_0, itm_fieldSlotChildren_empty")
-          - else ?
-            You only have {print {item "itm_money"}} {printItem "itm_money"}.
-        }
-    }
+    }(jump "dlg_fieldLogic_0_choiceCase1")
   - else ?
     {
       - var_fieldGrowState_0 >= const_harvestGrowState ?
@@ -1188,6 +1437,23 @@ DLG dlg_fieldLogic_0
 """
 NAME fieldLogic0
 
+DLG dlg_fieldLogic_1_choiceCase1
+"""
+{
+  - var_temp_choiceResult == 1 ?
+    {
+      - {item "itm_money"} >= const_fieldUnlockPrice ?
+        You unlock this field.
+        {var_fieldLevel_1 = 1}
+        (image "SPR, spr_fieldSlot_1, spr_fieldSlot_empty")
+        (image "ITM, itm_fieldSlotChildren_1, itm_fieldSlotChildren_empty")
+      - else ?
+        You only have {print {item "itm_money"}} {printItem "itm_money"}.
+    }
+}
+"""
+NAME fieldLogic1_choiceCase1
+
 DLG dlg_fieldLogic_1
 """
 {
@@ -1197,18 +1463,7 @@ DLG dlg_fieldLogic_1
         {var_temp_choiceResult = 1}
       - No
         {var_temp_choiceResult = 0}
-    }...{
-      - var_temp_choiceResult == 1 ?
-        {
-          - {item "itm_money"} >= const_fieldUnlockPrice ?
-            You unlock this field.
-            {var_fieldLevel_1 = 1}
-            (image "SPR, spr_fieldSlot_1, spr_fieldSlot_empty")
-            (image "ITM, itm_fieldSlotChildren_1, itm_fieldSlotChildren_empty")
-          - else ?
-            You only have {print {item "itm_money"}} {printItem "itm_money"}.
-        }
-    }
+    }(jump "dlg_fieldLogic_1_choiceCase1")
   - else ?
     {
       - var_fieldGrowState_1 >= const_harvestGrowState ?
@@ -1225,16 +1480,9 @@ DLG dlg_fieldLogic_1
 """
 NAME fieldLogic1
 
-DLG dlg_cacheLogic
+DLG dlg_cacheLogic_choiceCase1
 """
-Put {printItem "itm_mushroom"} to sellCache? {choice
-  - All
-    {var_temp_choiceResult = 1}
-  - One
-    {var_temp_choiceResult = 2}
-  - No
-    {var_temp_choiceResult = 0}
-}...{
+{
   - var_temp_choiceResult == 1 ?
     {
       - {item "itm_mushroom"} > 0 ?
@@ -1244,17 +1492,36 @@ Put {printItem "itm_mushroom"} to sellCache? {choice
       - else ?
         You have no {printItem "itm_mushroom"}.
     }
-}{
+}(jump "dlg_cacheLogic_choiceCase2")
+"""
+NAME cacheLogic_choiceCase1
+
+DLG dlg_cacheLogic_choiceCase2
+"""
+{
   - var_temp_choiceResult == 2 ?
     {
       - {item "itm_mushroom"} > 0 ?
-        {var_mashroomSellCacheCount = var_mashroomSellCacheCount + 1
+        {var_mashroomSellCacheCount = var_mashroomSellCacheCount + 1}
         You put 1 {printItem "itm_mushroom"} into SellCache. Current cache is {print var_mashroomSellCacheCount} {printItem "itm_mushroom"}.
         {item "itm_mushroom" {{item "itm_mushroom"} - 1}}
       - else ?
         You have no {printItem "itm_mushroom"}.
     }
 }
+"""
+NAME cacheLogic_choiceCase2
+
+DLG dlg_cacheLogic
+"""
+Put {printItem "itm_mushroom"} to sellCache? {choice
+  - All
+    {var_temp_choiceResult = 1}
+  - One
+    {var_temp_choiceResult = 2}
+  - No
+    {var_temp_choiceResult = 0}
+}(jump "dlg_cacheLogic_choiceCase1")
 """
 NAME cacheLogic
 
