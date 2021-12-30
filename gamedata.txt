@@ -1,4 +1,4 @@
-Write your game's title here
+Harvest Mushroom
 
 # BITSY VERSION 7.10
 
@@ -78,16 +78,16 @@ ROOM rm_home
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,a,a,a,a,a,a,a,a,a,a,0,0,0
 0,0,0,a,gs,gs,gs,gs,gs,gs,gs,gs,a,0,0,0
 0,0,0,a,gu,gu,gu,gu,gs,gu,gu,gu,a,0,0,0
-0,0,0,a,0,0,0,0,0,0,0,0,a,0,0,0
-0,0,0,a,0,0,0,0,0,0,0,0,a,0,0,0
-0,0,0,a,0,0,0,0,0,0,0,0,a,0,0,0
-0,0,0,a,0,0,0,0,0,0,0,0,a,0,0,0
-0,0,0,a,gs,gs,gs,gs,gs,0,gt,gs,gs,0,0,0
-0,0,0,a,gu,gu,gu,gu,gu,0,gv,gu,gu,0,0,0
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,a,0,0,h1s,h1s,0,0,0,0,a,0,0,0
+0,0,0,a,h1s,h1s,h1s,h1s,h1s,h1s,0,0,a,0,0,0
+0,0,0,a,h1s,h1s,h1s,h1s,h1s,h1s,0,0,a,0,0,0
+0,0,0,a,h1s,h1s,h1s,h1s,h1s,h1s,h1s,h1s,a,0,0,0
+0,0,0,a,a,a,a,a,a,h1s,a,a,a,0,0,0
+0,0,0,gt,gs,gs,gs,gs,gs,h1t,gt,gs,gs,0,0,0
+0,0,0,gv,gu,gu,gu,gu,gu,0,gv,gu,gu,0,0,0
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 NAME home
@@ -183,6 +183,7 @@ ITM itm_char_U 7,2
 ITM itm_char_W 8,4
 ITM itm_char_I 9,4
 ITM itm_char_N 10,4
+END dlh 7,12
 PAL pan
 
 ROOM rm_notReachGoal
@@ -210,6 +211,7 @@ ITM itm_char_F 7,4
 ITM itm_char_A 8,4
 ITM itm_char_L 10,4
 ITM itm_char_I 9,4
+END dli 7,12
 PAL pan
 
 TIL a
@@ -826,6 +828,28 @@ TIL h1r
 00001000
 NAME balloon0
 
+TIL h1s
+11111111
+00000100
+01000000
+00000000
+11111111
+00000000
+00010000
+00000000
+NAME floor
+
+TIL h1t
+11111111
+00000100
+01000000
+00000000
+11111111
+00000000
+00010000
+11111111
+NAME floorDoen
+
 SPR A
 00011000
 00011000
@@ -836,8 +860,6 @@ SPR A
 00100100
 00100100
 POS rm_start 1,9
-ITM itm_money 10
-ITM itm_mushroom 5
 
 SPR spr_fieldSlot_0
 00000000
@@ -1249,7 +1271,7 @@ NAME storage3
 DLG dlg_storageLogic
 POS rm_home 5,7
 
-SPR spr_cache0
+SPR spr_shippingBin0
 10111101
 11000011
 10000001
@@ -1258,11 +1280,11 @@ SPR spr_cache0
 10000001
 01111110
 00000000
-NAME cache0
-DLG dlg_cacheLogic
+NAME shippingBin0
+DLG dlg_shippingBinLogic
 POS rm_farm 4,7
 
-SPR spr_cache1
+SPR spr_shippingBin1
 00000000
 00111100
 01100110
@@ -1271,11 +1293,11 @@ SPR spr_cache1
 10100101
 10100101
 10100101
-NAME cache1
-DLG dlg_cacheLogic
+NAME shippingBin1
+DLG dlg_shippingBinLogic
 POS rm_farm 4,6
 
-SPR spr_cacheSign
+SPR spr_shippingBinSign
 11111111
 10000001
 10101001
@@ -1284,8 +1306,8 @@ SPR spr_cacheSign
 11111111
 00011000
 00011000
-NAME cacheSign
-DLG dlg_cacheSign
+NAME shippingBinSign
+DLG dlg_shippingBinSign
 POS rm_farm 3,6
 
 SPR spr_fieldSign
@@ -1342,7 +1364,8 @@ SPR spz
 00100100
 00100100
 NAME mayor_win
-POS rm_reachGoal 8,12
+DLG dlg_mayor_win
+POS rm_reachGoal 8,13
 
 SPR sq0
 00111100
@@ -1363,7 +1386,8 @@ SPR sq0
 00100100
 00100100
 NAME mayor_fail
-POS rm_notReachGoal 8,12
+DLG dlg_mayor_fail
+POS rm_notReachGoal 8,13
 
 ITM itm_fieldSlotChildren_0
 00000000
@@ -1746,12 +1770,12 @@ ITM itm_char_Z
 000000NaNNaN
 NAME char_Z
 
-DLG dlg_cacheSign
-text of dlg_cacheSign
-NAME cacheSign
+DLG dlg_shippingBinSign
+At the end of each day, the businessman will gather the {printItem "itm_mushroom"} in the shipping bin and paid you {printItem "itm_money"}.
+NAME shippingBinSign
 
 DLG dlg_fieldSign
-text of dlg_fieldSign
+When you unlock the field, some {printItem "itm_mushroom"} will grow in it.
 NAME fieldSign
 
 DLG dlg_newDay_choiceCase1
@@ -1760,23 +1784,23 @@ DLG dlg_newDay_choiceCase1
   - var_temp_choiceResult == 1 ?
     {var_calendarDate = var_calendarDate + 1}
     {
-      - var_calendarDate == const_goalLimitDate ?
+      - var_calendarDate > const_goalLimitDate ?
         {
           - {item "itm_money"} >= const_goalMoney ?
             You reach the goal!{pg}
-            (exitNow "rm_reachGoal")
+            (exitNow "rm_reachGoal, 7, 15")
           - else ? 
             You don't reach the goal!{pg}
-            (exitNow "rm_notReachGoal")
+            (exitNow "rm_notReachGoal, 7, 15")
         }
       - else ?
-        {print var_calendarDate}th day come...
+        Day {print var_calendarDate} comes...
     }{
-      - var_mashroomSellCacheCount > 0 ?
-        {var_temp = var_mashroomSellCacheCount * const_mashroomSellPrice}
-        You sell {print var_mashroomSellCacheCount} {printItem "itm_mushroom"} and gain {print var_temp} {printItem "itm_money"}.
+      - var_mushroomShippingBinCount > 0 ?
+        {var_temp = var_mushroomShippingBinCount * const_mushroomSellPrice}
+        You sell {print var_mushroomShippingBinCount} {printItem "itm_mushroom"} and gain {print var_temp} {printItem "itm_money"}.
         {item "itm_money" {{item "itm_money"} + var_temp}}
-        {var_mashroomSellCacheCount = 0}
+        {var_mushroomShippingBinCount = 0}
     }{
       - var_fieldLevel_0 > 0 ?
         {var_fieldGrowState_0 = var_fieldGrowState_0 + 1}
@@ -1806,7 +1830,7 @@ DLG dlg_newDay_choiceCase1
       - {var_wildSlotState_2 = 1}{var_wildSlotState_4 = 1}{var_wildSlotState_8 = 1}{var_wildSlotState_9 = 1}
       - {var_wildSlotState_1 = 1}{var_wildSlotState_3 = 1}{var_wildSlotState_6 = 1}
       - {var_wildSlotState_0 = 1}{var_wildSlotState_3 = 1}{var_wildSlotState_4 = 1}{var_wildSlotState_7 = 1}
-      - 
+      - {var_wildSlotState_8 = 1}{var_wildSlotState_3 = 1}
       - {var_wildSlotState_0 = 1}{var_wildSlotState_2 = 1}{var_wildSlotState_8 = 1}
       - {var_wildSlotState_0 = 1}{var_wildSlotState_6 = 1}{var_wildSlotState_7 = 1}{var_wildSlotState_9 = 1}
       - {var_wildSlotState_5 = 1}{var_wildSlotState_7 = 1}
@@ -1885,19 +1909,19 @@ NAME newDay
 
 DLG dlg_mayor_start
 """
-Welcome to the 10-day mashroom harvest festival. The goal is that you hold at least {print const_goalMoney} {printItem "itm_money"} at the 10-day end.(exit "rm_farm")(jump "dlg_newDay")
+Welcome to the {print const_goalLimitDate}-day mushroom harvest festival. The goal is that you hold at least {print const_goalMoney} {printItem "itm_money"} at the {print const_goalLimitDate}-day end.(exit "rm_farm, 5, 0")(jump "dlg_newDay")
 """
 NAME mayor_start
 
 DLG dlg_mayor_win
 """
-Congratulation! You reach the goal with {item "itm_money"}} {printItem "itm_money"}. Please look forward to our next festival.
+Congratulation! You reach the goal with {item "itm_money"} {printItem "itm_money"}. Please look forward to our next festival.
 """
 NAME mayor_win
 
 DLG dlg_mayor_fail
 """
-You only hold {item "itm_money"}} {printItem "itm_money"} and don't reach the goal. Please look forward to our next festival.
+You only hold {item "itm_money"} {printItem "itm_money"} and don't reach the goal. Please look forward to our next festival.
 """
 NAME mayor_fail
 
@@ -1932,7 +1956,7 @@ DLG dlg_fieldLogic_0
     {
       - var_fieldGrowState_0 >= const_harvestGrowState ?
         {var_temp = const_fieldOutputAmount * var_fieldLevel_0}
-        You gather {print var_temp} {printItem "itm_money"} from the field.
+        You gather {print var_temp} {printItem "itm_mushroom"} from the field.
         {item "itm_mushroom" {{item "itm_mushroom"} + var_temp}}
         {var_fieldGrowState_0 = 0}
         (image "SPR, spr_fieldSlot_0, spr_fieldSlot_empty")
@@ -1975,7 +1999,7 @@ DLG dlg_fieldLogic_1
     {
       - var_fieldGrowState_1 >= const_harvestGrowState ?
         {var_temp = const_fieldOutputAmount * var_fieldLevel_1}
-        You gather {print var_temp} {printItem "itm_money"} from the field.
+        You gather {print var_temp} {printItem "itm_mushroom"} from the field.
         {item "itm_mushroom" {{item "itm_mushroom"} + var_temp}}
         {var_fieldGrowState_1 = 0}
         (image "SPR, spr_fieldSlot_1, spr_fieldSlot_empty")
@@ -1987,50 +2011,50 @@ DLG dlg_fieldLogic_1
 """
 NAME fieldLogic1
 
-DLG dlg_cacheLogic_choiceCase1
+DLG dlg_shippingBinLogic_choiceCase1
 """
 {
   - var_temp_choiceResult == 1 ?
     {
       - {item "itm_mushroom"} > 0 ?
-        {var_mashroomSellCacheCount = var_mashroomSellCacheCount + {item "itm_mushroom"}}
-        You put {print {item "itm_mushroom"}} {printItem "itm_mushroom"} into SellCache. Current cache is {print var_mashroomSellCacheCount} {printItem "itm_mushroom"}.
+        {var_mushroomShippingBinCount = var_mushroomShippingBinCount + {item "itm_mushroom"}}
+        You put {print {item "itm_mushroom"}} {printItem "itm_mushroom"} into the shipping bin. Current count is {print var_mushroomShippingBinCount} {printItem "itm_mushroom"}.
         {item "itm_mushroom" 0}
       - else ?
         You have no {printItem "itm_mushroom"}.
     }
-}(jump "dlg_cacheLogic_choiceCase2")
+}(jump "dlg_shippingBinLogic_choiceCase2")
 """
-NAME cacheLogic_choiceCase1
+NAME shippingBinLogic_choiceCase1
 
-DLG dlg_cacheLogic_choiceCase2
+DLG dlg_shippingBinLogic_choiceCase2
 """
 {
   - var_temp_choiceResult == 2 ?
     {
       - {item "itm_mushroom"} > 0 ?
-        {var_mashroomSellCacheCount = var_mashroomSellCacheCount + 1}
-        You put 1 {printItem "itm_mushroom"} into SellCache. Current cache is {print var_mashroomSellCacheCount} {printItem "itm_mushroom"}.
+        {var_mushroomShippingBinCount = var_mushroomShippingBinCount + 1}
+        You put 1 {printItem "itm_mushroom"} into the shipping bin. Current count is {print var_mushroomShippingBinCount} {printItem "itm_mushroom"}.
         {item "itm_mushroom" {{item "itm_mushroom"} - 1}}
       - else ?
         You have no {printItem "itm_mushroom"}.
     }
 }
 """
-NAME cacheLogic_choiceCase2
+NAME shippingBinLogic_choiceCase2
 
-DLG dlg_cacheLogic
+DLG dlg_shippingBinLogic
 """
-Put {printItem "itm_mushroom"} to sellCache? {choice
+Current count is {print var_mushroomShippingBinCount} {printItem "itm_mushroom"}. Put {printItem "itm_mushroom"} to shipping bin? {choice
   - All
     {var_temp_choiceResult = 1}
   - One
     {var_temp_choiceResult = 2}
   - No
     {var_temp_choiceResult = 0}
-}(jump "dlg_cacheLogic_choiceCase1")
+}(jump "dlg_shippingBinLogic_choiceCase1")
 """
-NAME cacheLogic
+NAME shippingBinLogic
 
 DLG dlg_storageLogic
 """
@@ -2042,7 +2066,7 @@ DLG dlg_wildSlotLogic_0
 """
 {
   - var_wildSlotState_0 == 1 ?
-    Have output! wait someday later
+    You gather 1 wild {printItem "itm_mushroom"}.
     {item "itm_mushroom" {{item "itm_mushroom"} + 1}}
     {var_wildSlotState_0 = 0}
     (image "SPR, spr_wildSlot_0, spr_wildSlot_empty")
@@ -2056,7 +2080,7 @@ DLG dlg_wildSlotLogic_1
 """
 {
   - var_wildSlotState_1 == 1 ?
-    Have output! wait someday later
+    You gather 1 wild {printItem "itm_mushroom"}.
     {item "itm_mushroom" {{item "itm_mushroom"} + 1}}
     {var_wildSlotState_1 = 0}
     (image "SPR, spr_wildSlot_1, spr_wildSlot_empty")
@@ -2070,7 +2094,7 @@ DLG dlg_wildSlotLogic_2
 """
 {
   - var_wildSlotState_2 == 1 ?
-    Have output! wait someday later
+    You gather 1 wild {printItem "itm_mushroom"}.
     {item "itm_mushroom" {{item "itm_mushroom"} + 1}}
     {var_wildSlotState_2 = 0}
     (image "SPR, spr_wildSlot_2, spr_wildSlot_empty")
@@ -2084,7 +2108,7 @@ DLG dlg_wildSlotLogic_3
 """
 {
   - var_wildSlotState_3 == 1 ?
-    Have output! wait someday later
+    You gather 1 wild {printItem "itm_mushroom"}.
     {item "itm_mushroom" {{item "itm_mushroom"} + 1}}
     {var_wildSlotState_3 = 0}
     (image "SPR, spr_wildSlot_3, spr_wildSlot_empty")
@@ -2098,7 +2122,7 @@ DLG dlg_wildSlotLogic_4
 """
 {
   - var_wildSlotState_4 == 1 ?
-    Have output! wait someday later
+    You gather 1 wild {printItem "itm_mushroom"}.
     {item "itm_mushroom" {{item "itm_mushroom"} + 1}}
     {var_wildSlotState_4 = 0}
     (image "SPR, spr_wildSlot_4, spr_wildSlot_empty")
@@ -2112,7 +2136,7 @@ DLG dlg_wildSlotLogic_5
 """
 {
   - var_wildSlotState_5 == 1 ?
-    Have output! wait someday later
+    You gather 1 wild {printItem "itm_mushroom"}.
     {item "itm_mushroom" {{item "itm_mushroom"} + 1}}
     {var_wildSlotState_5 = 0}
     (image "SPR, spr_wildSlot_5, spr_wildSlot_empty")
@@ -2126,7 +2150,7 @@ DLG dlg_wildSlotLogic_6
 """
 {
   - var_wildSlotState_6 == 1 ?
-    Have output! wait someday later
+    You gather 1 wild {printItem "itm_mushroom"}.
     {item "itm_mushroom" {{item "itm_mushroom"} + 1}}
     {var_wildSlotState_6 = 0}
     (image "SPR, spr_wildSlot_6, spr_wildSlot_empty")
@@ -2140,7 +2164,7 @@ DLG dlg_wildSlotLogic_7
 """
 {
   - var_wildSlotState_7 == 1 ?
-    Have output! wait someday later
+    You gather 1 wild {printItem "itm_mushroom"}.
     {item "itm_mushroom" {{item "itm_mushroom"} + 1}}
     {var_wildSlotState_7 = 0}
     (image "SPR, spr_wildSlot_7, spr_wildSlot_empty")
@@ -2154,7 +2178,7 @@ DLG dlg_wildSlotLogic_8
 """
 {
   - var_wildSlotState_8 == 1 ?
-    Have output! wait someday later
+    You gather 1 wild {printItem "itm_mushroom"}.
     {item "itm_mushroom" {{item "itm_mushroom"} + 1}}
     {var_wildSlotState_8 = 0}
     (image "SPR, spr_wildSlot_8, spr_wildSlot_empty")
@@ -2168,7 +2192,7 @@ DLG dlg_wildSlotLogic_9
 """
 {
   - var_wildSlotState_9 == 1 ?
-    Have output! wait someday later
+    You gather 1 wild {printItem "itm_mushroom"}.
     {item "itm_mushroom" {{item "itm_mushroom"} + 1}}
     {var_wildSlotState_9 = 0}
     (image "SPR, spr_wildSlot_9, spr_wildSlot_empty")
@@ -2182,6 +2206,14 @@ DLG dlg_table
 A tv.
 NAME table
 
+DLG dlh
+The end
+NAME ending 1
+
+DLG dli
+The end
+NAME ending 2
+
 VAR var_temp_choiceResult
 1
 
@@ -2192,22 +2224,22 @@ VAR const_harvestGrowState
 2
 
 VAR const_goalMoney
-10
+100
 
 VAR const_goalLimitDate
-5
+10
 
 VAR var_calendarDate
 0
 
-VAR var_mashroomSellCacheCount
+VAR var_mushroomShippingBinCount
 0
 
-VAR const_mashroomSellPrice
-1
+VAR const_mushroomSellPrice
+5
 
 VAR const_fieldUnlockPrice
-5
+25
 
 VAR var_fieldLevel_0
 0
@@ -2222,7 +2254,7 @@ VAR var_fieldGrowState_1
 0
 
 VAR const_fieldOutputAmount
-5
+9
 
 VAR var_wildSlotState_0
 1
