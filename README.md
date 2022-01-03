@@ -6,6 +6,12 @@ A mushroom farming simulation game.
 
 During the mushroom harvest festival, you manager a farm with fields for planting mushrooms. You can also go into the forest for gathering wild mushrooms. Then sell mushrooms for money. Finally, hold enough money for win-the-game!
 
+![](./screenshots/farm.jpg)
+
+![](./screenshots/forest.jpg)
+
+![](./screenshots/home.jpg)
+
 ### release
 
 The single `.html` file.
