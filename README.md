@@ -1,4 +1,4 @@
-This project created in [itch.io - 2021 December Bitsy jam](https://hundun.itch.io/harvest-mushroom) for the theme `Mushroom`
+This project created in [itch.io - 2021 December Bitsy jam](https://itch.io/jam/mushrooms-bitsy/rate/1335677) for the theme `Mushroom`
 
 ## Harvest Mushroom
 
@@ -14,7 +14,7 @@ During the mushroom harvest festival, you manager a farm with fields for plantin
 
 ### release
 
-The single `.html` file.
+The single `.html` file. [Online play](https://hundun.itch.io/harvest-mushroom)
 
 ### How to play
 
